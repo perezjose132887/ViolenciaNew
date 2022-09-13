@@ -16,12 +16,11 @@
         app:srcCompat="@drawable/unido"
         android:layout_gravity="center"
         android:scaleType="fitCenter"
-        android:layout_margin="50dp"/>
+        android:layout_margin="30dp"/>
 
 
 
 <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/etCorreo"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -31,6 +30,7 @@
     android:layout_marginBottom="15dp"
     app:startIconDrawable="@drawable/ic_correo">
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -42,7 +42,6 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etContraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -53,6 +52,7 @@
         app:startIconDrawable="@drawable/ic_contrasena"
         app:endIconMode="password_toggle">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etContraseña"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -84,6 +84,7 @@
         android:layout_height="wrap_content"
         android:text="Crear Cuenta"
         android:textAlignment="center"
+        android:textSize="16dp"
         android:textColor="@color/celesteFuerteUno"/>
 
 
