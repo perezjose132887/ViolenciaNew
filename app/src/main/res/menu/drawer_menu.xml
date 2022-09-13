@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_alerta"
+            android:title="Alerta"
+            android:icon="@drawable/alerta"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_emergencia"
+            android:title="Emergencia"
+            android:icon="@drawable/emergencia"/>
+        <item
+            android:id="@+id/nav_pregunta"
+            android:title="Preguntas"
+            android:icon="@drawable/pregunta"/>
+    </group>
+
+    <item android:title="Social">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_notificacion"
+                    android:title="Notificaiones"
+                    android:icon="@drawable/ic_notificacion"/>
+                <item
+                    android:id="@+id/nav_contactos"
+                    android:title="Contactos"
+                    android:icon="@drawable/ic_contacto"/>
+            </group>
+        </menu>
+    </item>
+</menu>

@@ -30,7 +30,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ModuloAlertaActivity"
+            android:name=".NavigationDrawer"
             android:exported="false" />
         <activity
             android:name=".ModuloContactoActivity"

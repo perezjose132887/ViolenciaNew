@@ -79,7 +79,7 @@ public class ModuloContactoActivity extends AppCompatActivity {
         continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(ModuloContactoActivity.this,ModuloAlertaActivity.class);
+                Intent intent=new Intent(ModuloContactoActivity.this,NavigationDrawer.class);
                 startActivity(intent);
                 finish();
             }
