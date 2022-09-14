@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DenunciaFragment"
+    android:orientation="vertical"
+    android:background="@color/celesteBajoUno">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:text="DENUNCIAS"
+        android:textAlignment="center"
+        android:textColor="@color/celesteFuerteUno"
+        android:textSize="25dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione el tipo de violencia"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+
+
+    <Spinner
+        android:id="@+id/spViolencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="@color/celesteBajoDos"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escriba su declaracion"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/etDeclaracion"
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:background="#ABF6F6"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnVerGaleria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:text="Ver galeria"
+        android:textColor="@color/celesteFuerteDos"
+        android:backgroundTint="@color/celesteBajoDos"/>
+
+
+    <ImageView
+        android:id="@+id/imgFotoViolencia"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_nombreusuario" />
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:hint="Cedula Identidad"
+        app:helperText="*Requerido"
+        app:helperTextTextColor="@color/celesteFuerteUno">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCiBuscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btnVerificarCi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verificar Cedula"
+                android:layout_marginLeft="110dp"
+                android:layout_marginRight="110dp"
+                android:textColor="@color/celesteFuerteDos"
+                android:backgroundTint="@color/celesteBajoDos"/>
+
+
+
+    <Button
+        android:id="@+id/btnRegistrarDenuncia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/celesteFuerteUno"/>
+
+    <EditText
+        android:id="@+id/etId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

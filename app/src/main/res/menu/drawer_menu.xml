@@ -15,6 +15,10 @@
             android:id="@+id/nav_pregunta"
             android:title="Preguntas"
             android:icon="@drawable/pregunta"/>
+        <item
+            android:id="@+id/nav_denuncia"
+            android:title="Denuncias"
+            android:icon="@drawable/denuncia"/>
     </group>
 
     <item android:title="Social">

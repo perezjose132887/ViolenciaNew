@@ -110,7 +110,7 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                insertarUsuario("http://192.168.1.104/violencia/ModuloUsuarioActivity.php");
+                insertarUsuario("http://192.168.1.100/violencia/ModuloUsuarioActivity.php");
             }
         });
 
