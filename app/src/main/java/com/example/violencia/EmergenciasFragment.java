@@ -1,12 +1,18 @@
 package com.example.violencia;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +29,10 @@ public class EmergenciasFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+
+    ImageView patrulla,ambulancia,bombero,defensoria,transito,sar;
+    View vista;
 
     public EmergenciasFragment() {
         // Required empty public constructor
@@ -58,7 +68,85 @@ public class EmergenciasFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_emergencias, container, false);
+        vista=inflater.inflate(R.layout.fragment_emergencias, container, false);
+        patrulla=(ImageView) vista.findViewById(R.id.ibtnPatrulla);
+        ambulancia=(ImageView) vista.findViewById(R.id.ibtnAmbulancia);
+        bombero=(ImageView) vista.findViewById(R.id.ibtnBomberos);
+        defensoria=(ImageView) vista.findViewById(R.id.ibtnDefensoria);
+        transito=(ImageView) vista.findViewById(R.id.ibtnTransito);
+        sar=(ImageView) vista.findViewById(R.id.ibtnSar);
+
+
+
+        patrulla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = "tel:110";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(phone));
+                startActivity(intent);
+            }
+        });
+        ambulancia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = "tel:160";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(phone));
+                startActivity(intent);
+            }
+        });
+        bombero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = "tel:119";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(phone));
+                startActivity(intent);
+            }
+        });
+        defensoria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = "tel:156";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(phone));
+                startActivity(intent);
+            }
+        });
+        transito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = "tel:111";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(phone));
+                startActivity(intent);
+            }
+        });
+        sar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = "tel:123";
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(phone));
+                startActivity(intent);
+            }
+        });
+
+
+
+
+        return vista;
     }
+
+
+
+
+
+
+
+
+
+
+
 }

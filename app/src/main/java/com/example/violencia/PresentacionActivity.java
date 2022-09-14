@@ -32,7 +32,7 @@ public class PresentacionActivity extends AppCompatActivity {
                 SharedPreferences preferences=getSharedPreferences("preferenciasLogin", Context.MODE_PRIVATE);
                 boolean sesion=preferences.getBoolean("sesion",false);
                 if(sesion){
-                    Intent intent=new Intent(getApplicationContext(),ModuloContactoActivity.class);
+                    Intent intent=new Intent(getApplicationContext(),NavigationDrawer.class);
                     startActivity(intent);
                     finish();
                 }else{

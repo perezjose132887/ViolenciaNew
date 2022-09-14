@@ -1,12 +1,37 @@
 package com.example.violencia;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.location.Address;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.location.LocationRequest;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.provider.Settings;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.violencia.Modelo.ModelContactosActivity;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +48,26 @@ public class AlertaFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+
+
+
+
+
+    View vista;
+    ImageButton alerta;
+
+    //To esto es para mandar coordenadas
+    EditText latitud, longitud;
+    TextView obtenerCoordenadas;
+    public static final int REQUEST_CODE=1;
+
+
+
+
+
+
+
 
     public AlertaFragment() {
         // Required empty public constructor
@@ -55,10 +100,149 @@ public class AlertaFragment extends Fragment {
         }
     }
 
+
+
+
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_alerta, container, false);
+        vista=inflater.inflate(R.layout.fragment_alerta, container, false);
+        alerta = (ImageButton) vista.findViewById(R.id.ibtnAlerta);
+        latitud = (EditText) vista.findViewById(R.id.etLatitud);
+        longitud = (EditText) vista.findViewById(R.id.etLongitud);
+        obtenerCoordenadas=(TextView) vista.findViewById(R.id.txtObtenerCoordenadas);
+
+
+        //Permiso para enviar mensajes de ayuda
+        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, 1);
+        }
+        //Permiso para enviar coordenadas
+
+
+
+        /*int permissionCheck = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION);
+        if (permissionCheck == PackageManager.PERMISSION_DENIED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+            } else {
+                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            }
+        }*/
+
+
+        alerta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                enviarMensaje();
+                llamar();
+            }
+        });
+
+
+        obtenerCoordenadas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                enviarMensaje();
+                llamar();
+
+            }
+        });
+
+
+
+
+        return vista;
     }
+
+
+
+
+    /*private Boolean verificarGPSOn() {
+        String provider = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
+        System.out.println("Provider contains=> " + provider);
+        if (provider.contains("gps") || provider.contains("network")) {
+            return true;
+        } else {
+            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+            Toast.makeText(getContext(), "El gps debe estar encendido", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+
+    }
+
+
+
+    public void enviarCoordenadas() {
+        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        LocationListener locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(@NonNull Location location) {
+                latitud.setText("" + location.getLatitude());
+                longitud.setText("" + location.getLongitude());
+            }
+
+            public void onStatusChanged(String provider, int status, Bundle extras) {
+            }
+
+            public void onProviderEnabled(String provider) {
+            }
+
+            public void onProviderDisabled(String provider) {
+            }
+
+        };
+        int permissionCheck = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+    }*/
+
+
+
+    //Enviar mensje a los contactos seleccionados
+    public void enviarMensaje(){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(getContext(), "administracion", null, 1);
+        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
+        Cursor cursor = BaseDeDatos.rawQuery("SELECT * FROM contactos", null);
+        ArrayList<ModelContactosActivity> lista = new ArrayList<ModelContactosActivity>();
+        while (cursor.moveToNext()) {
+            ModelContactosActivity cm = new ModelContactosActivity();
+            cm.setId(cursor.getInt(0));
+            cm.setContacto(cursor.getString(1));
+            cm.setTelefono(cursor.getString(2));
+            lista.add(cm);
+        }
+
+
+        //String mensajeAyuda = "Ayuda: \n https://maps.google.com/?q=" + latitud.getText().toString().trim() + "," + longitud.getText().toString().trim();
+
+        for (int i = 0; i < lista.size(); i++) {
+
+
+            //Envia mensajes a todos los contactos seleccionados
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(lista.get(i).getTelefono(), null, "Hola, necesito ayuda por favor es urgente", null, null);
+
+
+        }
+        Toast.makeText(getContext(), "SmsEnviado", Toast.LENGTH_SHORT).show();
+    }
+
+
+    //Realizar la llamada al 911
+    public void llamar(){
+        String phone = "tel:911";
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse(phone));
+        startActivity(intent);
+    }
+
+
+
 }
+
+
+

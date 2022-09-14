@@ -116,12 +116,12 @@ public class ModuloContactoActivity extends AppCompatActivity {
 
 
     public void eliminarListView(){
-        SQLiteDatabase db = admin.getWritableDatabase();
-        db.delete("contactos",null,null);
-        db.execSQL("DROP TABLE contactos");
-        db.execSQL("create table if not exists contactos(idContacto integer primary key autoincrement, nombre text, numero int)");
+        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
+        BaseDeDatos.delete("contactos",null,null);
+        BaseDeDatos.execSQL("DROP TABLE contactos");
+        BaseDeDatos.execSQL("create table if not exists contactos(idContacto integer primary key autoincrement, nombre text, numero int)");
         Toast.makeText(ModuloContactoActivity.this,"La lista a sido limpiado",Toast.LENGTH_SHORT).show();
-        db.close();
+        BaseDeDatos.close();
         finish();
         startActivity(getIntent());
     }
