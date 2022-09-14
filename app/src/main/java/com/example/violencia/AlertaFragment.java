@@ -24,6 +24,7 @@ import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -59,8 +60,7 @@ public class AlertaFragment extends Fragment {
 
     //To esto es para mandar coordenadas
     EditText latitud, longitud;
-    TextView obtenerCoordenadas;
-    public static final int REQUEST_CODE=1;
+    Button obtenerCoordenadas;
 
 
 
@@ -113,25 +113,49 @@ public class AlertaFragment extends Fragment {
         alerta = (ImageButton) vista.findViewById(R.id.ibtnAlerta);
         latitud = (EditText) vista.findViewById(R.id.etLatitud);
         longitud = (EditText) vista.findViewById(R.id.etLongitud);
-        obtenerCoordenadas=(TextView) vista.findViewById(R.id.txtObtenerCoordenadas);
+        obtenerCoordenadas=(Button) vista.findViewById(R.id.btnObtenerCoordenadas);
 
 
         //Permiso para enviar mensajes de ayuda
         if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, 1);
         }
-        //Permiso para enviar coordenadas
+        //Permiso para gps
+        int permissioCheck=ContextCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION);
+        if(permissioCheck==PackageManager.PERMISSION_DENIED){
+            if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity()
+                    ,Manifest.permission.ACCESS_FINE_LOCATION)){
 
-
-
-        /*int permissionCheck = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION);
-        if (permissionCheck == PackageManager.PERMISSION_DENIED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)) {
-
-            } else {
-                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            }else{
+                ActivityCompat.requestPermissions(getActivity(),
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
             }
-        }*/
+        }
+
+
+        obtenerCoordenadas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                verificarGPSOn();
+                LocationManager locationManager=(LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+                LocationListener locationListener=new LocationListener() {
+                    @Override
+                    public void onLocationChanged(@NonNull Location location) {
+                        //Toast.makeText(getActivity(), ""+location.getLatitude()+" "+location.getLongitude(), Toast.LENGTH_SHORT).show();
+                        latitud.setText(""+location.getLatitude());
+                        longitud.setText(""+location.getLongitude());
+                    }
+                    public void onStatusChanged(String provider,int status,Bundle extras){}
+                    public void onProviderEnabled(String provider){}
+                    public void onProviderDisabled(String provider){}
+                };
+                int permissioCheck=ContextCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION);
+                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
+
+            }
+        });
+
+
 
 
         alerta.setOnClickListener(new View.OnClickListener() {
@@ -139,16 +163,6 @@ public class AlertaFragment extends Fragment {
             public void onClick(View v) {
                 enviarMensaje();
                 llamar();
-            }
-        });
-
-
-        obtenerCoordenadas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                enviarMensaje();
-                llamar();
-
             }
         });
 
@@ -161,7 +175,7 @@ public class AlertaFragment extends Fragment {
 
 
 
-    /*private Boolean verificarGPSOn() {
+    private Boolean verificarGPSOn() {
         String provider = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
         System.out.println("Provider contains=> " + provider);
         if (provider.contains("gps") || provider.contains("network")) {
@@ -177,28 +191,26 @@ public class AlertaFragment extends Fragment {
 
 
 
-    public void enviarCoordenadas() {
-        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-        LocationListener locationListener = new LocationListener() {
+    //obtener coordenadas
+    public void ObtenerCoordenadas(){
+        LocationManager locationManager=(LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        LocationListener locationListener=new LocationListener() {
             @Override
             public void onLocationChanged(@NonNull Location location) {
-                latitud.setText("" + location.getLatitude());
-                longitud.setText("" + location.getLongitude());
+                //Toast.makeText(getActivity(), ""+location.getLatitude()+" "+location.getLongitude(), Toast.LENGTH_SHORT).show();
+                latitud.setText(""+location.getLatitude());
+                longitud.setText(""+location.getLongitude());
             }
-
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-            }
-
-            public void onProviderEnabled(String provider) {
-            }
-
-            public void onProviderDisabled(String provider) {
-            }
-
+            public void onStatusChanged(String provider,int status,Bundle extras){}
+            public void onProviderEnabled(String provider){}
+            public void onProviderDisabled(String provider){}
         };
-        int permissionCheck = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION);
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-    }*/
+        int permissioCheck=ContextCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
+
+    }
+
+
 
 
 
@@ -215,21 +227,21 @@ public class AlertaFragment extends Fragment {
             cm.setTelefono(cursor.getString(2));
             lista.add(cm);
         }
-
-
-        //String mensajeAyuda = "Ayuda: \n https://maps.google.com/?q=" + latitud.getText().toString().trim() + "," + longitud.getText().toString().trim();
+        String mensajeAyuda = "Hola necesito ayuda, mi ubicacion es: \n https://maps.google.com/?q="
+                + latitud.getText().toString().trim() + "," + longitud.getText().toString().trim()
+                +"\n Este mensaje ha sido enviado desde la App Violencia Contra la Mujer";
 
         for (int i = 0; i < lista.size(); i++) {
-
-
             //Envia mensajes a todos los contactos seleccionados
             SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage(lista.get(i).getTelefono(), null, "Hola, necesito ayuda por favor es urgente", null, null);
-
-
+            smsManager.sendTextMessage(lista.get(i).getTelefono(), null, mensajeAyuda, null, null);
         }
         Toast.makeText(getContext(), "SmsEnviado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), mensajeAyuda, Toast.LENGTH_SHORT).show();
     }
+
+
+
 
 
     //Realizar la llamada al 911
@@ -239,6 +251,9 @@ public class AlertaFragment extends Fragment {
         intent.setData(Uri.parse(phone));
         startActivity(intent);
     }
+
+
+
 
 
 

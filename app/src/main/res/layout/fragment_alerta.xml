@@ -26,15 +26,14 @@
         android:layout_width="match_parent"
         android:layout_height="307dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="32dp"
-        android:layout_marginBottom="20dp"
         android:adjustViewBounds="false"
         android:scaleType="fitCenter"
         android:src="@drawable/ayuda" />
 
     <TextView
-        android:id="@+id/txtObtenerCoordenadas"
+        android:id="@+id/txtObt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -42,14 +41,23 @@
         android:textColor="#FF0000"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:text="Click en la imagen si sufre de violencia" />
+        android:text="Obtener coordendas y despues click en la imagen" />
+
+    <Button
+        android:id="@+id/btnObtenerCoordenadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:text="Obtener Coordendas"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"/>
+
 
     <EditText
         android:id="@+id/etLatitud"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"
         android:inputType="textPersonName"
