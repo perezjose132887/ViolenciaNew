@@ -19,6 +19,10 @@
             android:id="@+id/nav_denuncia"
             android:title="Denuncias"
             android:icon="@drawable/denuncia"/>
+        <item
+            android:id="@+id/nav_whatsapp"
+            android:title="Consultas WhatsApp"
+            android:icon="@drawable/whatsapp"/>
     </group>
 
     <item android:title="Social">

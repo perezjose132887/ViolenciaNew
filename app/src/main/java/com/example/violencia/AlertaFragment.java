@@ -116,10 +116,7 @@ public class AlertaFragment extends Fragment {
         obtenerCoordenadas=(Button) vista.findViewById(R.id.btnObtenerCoordenadas);
 
 
-        //Permiso para enviar mensajes de ayuda
-        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, 1);
-        }
+
         //Permiso para gps
         int permissioCheck=ContextCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION);
         if(permissioCheck==PackageManager.PERMISSION_DENIED){
@@ -131,6 +128,8 @@ public class AlertaFragment extends Fragment {
                         new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
             }
         }
+
+
 
 
         obtenerCoordenadas.setOnClickListener(new View.OnClickListener() {
@@ -163,6 +162,7 @@ public class AlertaFragment extends Fragment {
             public void onClick(View v) {
                 enviarMensaje();
                 llamar();
+
             }
         });
 
@@ -192,7 +192,7 @@ public class AlertaFragment extends Fragment {
 
 
     //obtener coordenadas
-    public void ObtenerCoordenadas(){
+    /*public void ObtenerCoordenadas(){
         LocationManager locationManager=(LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         LocationListener locationListener=new LocationListener() {
             @Override
@@ -208,7 +208,7 @@ public class AlertaFragment extends Fragment {
         int permissioCheck=ContextCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION);
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
 
-    }
+    }*/
 
 
 
@@ -246,7 +246,7 @@ public class AlertaFragment extends Fragment {
 
     //Realizar la llamada al 911
     public void llamar(){
-        String phone = "tel:911";
+        String phone = "tel:800140348";
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse(phone));
         startActivity(intent);

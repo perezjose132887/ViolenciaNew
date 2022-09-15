@@ -74,7 +74,7 @@
         android:layout_marginRight="50dp"
         android:ems="10"
         android:gravity="start|top"
-        android:background="#ABF6F6"
+        android:background="#F3AAD8"
         android:inputType="textMultiLine" />
 
     <Button
@@ -85,7 +85,6 @@
         android:layout_marginLeft="100dp"
         android:layout_marginRight="100dp"
         android:text="Ver galeria"
-        android:textColor="@color/celesteFuerteDos"
         android:backgroundTint="@color/celesteBajoDos"/>
 
 
@@ -123,15 +122,12 @@
                 android:id="@+id/btnVerificarCi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Verificar Cedula"
                 android:layout_marginLeft="110dp"
                 android:layout_marginRight="110dp"
-                android:textColor="@color/celesteFuerteDos"
-                android:backgroundTint="@color/celesteBajoDos"/>
+                android:backgroundTint="@color/celesteBajoDos"
+                android:text="Verificar Cedula"/>
 
-
-
-    <Button
+            <Button
         android:id="@+id/btnRegistrarDenuncia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

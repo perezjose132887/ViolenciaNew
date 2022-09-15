@@ -2,11 +2,14 @@ package com.example.violencia;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -50,6 +53,13 @@ public class ModuloContactoActivity extends AppCompatActivity {
         continuar=(Button) findViewById(R.id.btnContinuar);
         listaContactos=(ListView) findViewById(R.id.lvListaContactos);
 
+
+
+
+        //Permiso para enviar mensajes de ayuda
+        if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(ModuloContactoActivity.this, new String[]{Manifest.permission.SEND_SMS}, 1);
+        }
         /*eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

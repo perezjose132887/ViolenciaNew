@@ -219,6 +219,7 @@ public class DenunciaFragment extends Fragment {
         sidCategoria=idCategoria();
         sdeclaracion=declaracion.getText().toString().trim();
         imagenViolencia=getStringImagen(bitmap);
+        String idDenuncia=null;
 
 
         if(sdeclaracion.isEmpty()){
@@ -304,7 +305,7 @@ public class DenunciaFragment extends Fragment {
     //Agregar para el idDepartamento
     public int idCategoria() {
         int valor = 0;
-        if (violencia.getSelectedItem().toString() == "Violencia Fisica") {
+        if (violencia.getSelectedItem().toString() == "Violencia Física") {
             valor = 1;
         } else {
             if (violencia.getSelectedItem().toString() == "Violencia Psicológica") {

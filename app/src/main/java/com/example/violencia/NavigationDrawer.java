@@ -95,6 +95,9 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
             case R.id.nav_denuncia:
                 ft.replace(R.id.content,new DenunciaFragment()).commit();
                 break;
+            case R.id.nav_whatsapp:
+                ft.replace(R.id.content,new WhatsappFragment()).commit();
+                break;
             case R.id.nav_notificacion:
                 ft.replace(R.id.content,new NotificacionesFragment()).commit();
                 break;

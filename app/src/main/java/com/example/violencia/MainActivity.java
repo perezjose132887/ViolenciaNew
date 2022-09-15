@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 validarUsuario("http://192.168.1.100/violencia/validarUsuario.php");
+                finish();
             }
 
         });
