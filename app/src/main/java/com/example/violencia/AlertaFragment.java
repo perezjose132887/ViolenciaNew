@@ -60,7 +60,6 @@ public class AlertaFragment extends Fragment {
 
     //To esto es para mandar coordenadas
     EditText latitud, longitud;
-    Button obtenerCoordenadas;
 
 
 
@@ -113,7 +112,6 @@ public class AlertaFragment extends Fragment {
         alerta = (ImageButton) vista.findViewById(R.id.ibtnAlerta);
         latitud = (EditText) vista.findViewById(R.id.etLatitud);
         longitud = (EditText) vista.findViewById(R.id.etLongitud);
-        obtenerCoordenadas=(Button) vista.findViewById(R.id.btnObtenerCoordenadas);
 
 
 
@@ -129,30 +127,10 @@ public class AlertaFragment extends Fragment {
             }
         }
 
+        ObtenerCoordenadas();
 
 
 
-        obtenerCoordenadas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                verificarGPSOn();
-                LocationManager locationManager=(LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-                LocationListener locationListener=new LocationListener() {
-                    @Override
-                    public void onLocationChanged(@NonNull Location location) {
-                        //Toast.makeText(getActivity(), ""+location.getLatitude()+" "+location.getLongitude(), Toast.LENGTH_SHORT).show();
-                        latitud.setText(""+location.getLatitude());
-                        longitud.setText(""+location.getLongitude());
-                    }
-                    public void onStatusChanged(String provider,int status,Bundle extras){}
-                    public void onProviderEnabled(String provider){}
-                    public void onProviderDisabled(String provider){}
-                };
-                int permissioCheck=ContextCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION);
-                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
-
-            }
-        });
 
 
 
@@ -186,6 +164,27 @@ public class AlertaFragment extends Fragment {
             return false;
         }
 
+
+    }
+
+
+
+    public void ObtenerCoordenadas(){
+        verificarGPSOn();
+        LocationManager locationManager=(LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        LocationListener locationListener=new LocationListener() {
+            @Override
+            public void onLocationChanged(@NonNull Location location) {
+                //Toast.makeText(getActivity(), ""+location.getLatitude()+" "+location.getLongitude(), Toast.LENGTH_SHORT).show();
+                latitud.setText(""+location.getLatitude());
+                longitud.setText(""+location.getLongitude());
+            }
+            public void onStatusChanged(String provider,int status,Bundle extras){}
+            public void onProviderEnabled(String provider){}
+            public void onProviderDisabled(String provider){}
+        };
+        int permissioCheck=ContextCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,0,0,locationListener);
 
     }
 

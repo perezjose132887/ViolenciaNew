@@ -55,6 +55,15 @@ public class ModuloContactoActivity extends AppCompatActivity {
 
 
 
+        String idUsuario=getIntent().getStringExtra("idUsuario");
+        String nombres=getIntent().getStringExtra("nombres");
+        String primerApellido=getIntent().getStringExtra("primerApellido");
+        String numeroCI=getIntent().getStringExtra("numeroCI");
+        String foto=getIntent().getStringExtra("foto");
+        String correo=getIntent().getStringExtra("correo");
+
+        Toast.makeText(ModuloContactoActivity.this, ""+nombres+" "+idUsuario, Toast.LENGTH_SHORT).show();
+
 
         //Permiso para enviar mensajes de ayuda
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
@@ -90,10 +99,19 @@ public class ModuloContactoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(ModuloContactoActivity.this,NavigationDrawer.class);
+                intent.putExtra("idUsuario",idUsuario);
+                intent.putExtra("nombres",nombres);
+                intent.putExtra("primerApellido",primerApellido);
+                intent.putExtra("numeroCI",numeroCI);
+                intent.putExtra("foto",foto);
+                intent.putExtra("correo",correo);
                 startActivity(intent);
                 finish();
             }
         });
+
+
+
 
 
 

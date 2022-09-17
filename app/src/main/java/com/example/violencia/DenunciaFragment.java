@@ -1,7 +1,6 @@
 package com.example.violencia;
 
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -31,7 +30,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.violencia.Modelo.ModelModuloUsuarioActivity;
+import com.example.violencia.Modelo.Usuario;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -61,15 +60,19 @@ public class DenunciaFragment extends Fragment {
 
     Spinner violencia;
     View vista;
-    int sidUsuario,sidCategoria;
+    int sidCategoria;
     EditText declaracion;
     String sdeclaracion,imagenViolencia;
     Bitmap bitmap;
     ImageView fotoViolencia;
     int PICK_IMAGE_REQUEST=1;
-    Button mostrarGaleria,registrarDenuncia,verificaCedula;
+    Button mostrarGaleria,registrarDenuncia;
     TextView titulo;
     EditText idBuscar,ciBuscar;
+
+
+    String idUsuario;
+    String nombres;
 
 
     public DenunciaFragment() {
@@ -98,8 +101,8 @@ public class DenunciaFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            idUsuario=getArguments().getString("idUsuario");
+            nombres=getArguments().getString("nombres");
         }
     }
 
@@ -114,9 +117,8 @@ public class DenunciaFragment extends Fragment {
         mostrarGaleria=(Button) vista.findViewById(R.id.btnVerGaleria);
         registrarDenuncia=(Button) vista.findViewById(R.id.btnRegistrarDenuncia);
         titulo=(TextView) vista.findViewById(R.id.txtTitulo);
-        idBuscar=(EditText) vista.findViewById(R.id.etId);
-        ciBuscar=(EditText) vista.findViewById(R.id.etCiBuscar);
-        verificaCedula=(Button) vista.findViewById(R.id.btnVerificarCi);
+
+        Toast.makeText(getContext(), ""+idUsuario+"-"+nombres, Toast.LENGTH_SHORT).show();
 
 
         String[] opcionesViolencia={"Violencia Fisica","Violencia Psicológica","Violencia Económica","Violencia Sexual","Violencia Emocional","Otro"};
@@ -143,12 +145,6 @@ public class DenunciaFragment extends Fragment {
             }
         });
 
-        verificaCedula.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                buscarIdUsuario("http://192.168.1.100/violencia/buscarUsuario.php?numeroCI="+ciBuscar.getText()+"");
-            }
-        });
 
         /*titulo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,7 +176,7 @@ public class DenunciaFragment extends Fragment {
 
 
 
-    public void buscarIdUsuario(String URL){
+    /*public void buscarIdUsuario(String URL){
         JsonArrayRequest jsonArrayRequest= new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -204,7 +200,7 @@ public class DenunciaFragment extends Fragment {
         );
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(jsonArrayRequest);
-    }
+    }*/
 
 
 
@@ -213,13 +209,9 @@ public class DenunciaFragment extends Fragment {
 
 
     public void insertarDenuncia(String URL){
-        ModelModuloUsuarioActivity mo=new ModelModuloUsuarioActivity();
-
-        sidUsuario=Integer.parseInt(idBuscar.getText().toString().trim());
         sidCategoria=idCategoria();
         sdeclaracion=declaracion.getText().toString().trim();
         imagenViolencia=getStringImagen(bitmap);
-        String idDenuncia=null;
 
 
         if(sdeclaracion.isEmpty()){
@@ -249,7 +241,7 @@ public class DenunciaFragment extends Fragment {
 
 
                     Map<String, String> parametros = new Hashtable<String, String>();
-                    parametros.put("idUsuario",String.valueOf(sidUsuario));
+                    parametros.put("idUsuario",idUsuario);
                     parametros.put("idCategoria", String.valueOf(sidCategoria));
                     parametros.put("declaracion", sdeclaracion);
                     parametros.put("foto",imagenViolencia);

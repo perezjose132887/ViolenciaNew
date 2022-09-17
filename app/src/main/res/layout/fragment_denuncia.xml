@@ -98,35 +98,6 @@
 
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:hint="Cedula Identidad"
-        app:helperText="*Requerido"
-        app:helperTextTextColor="@color/celesteFuerteUno">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etCiBuscar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:text="" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-            <Button
-                android:id="@+id/btnVerificarCi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
-                android:layout_marginRight="110dp"
-                android:backgroundTint="@color/celesteBajoDos"
-                android:text="Verificar Cedula"/>
-
             <Button
         android:id="@+id/btnRegistrarDenuncia"
         android:layout_width="match_parent"
@@ -137,12 +108,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/celesteFuerteUno"/>
 
-    <EditText
-        android:id="@+id/etId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"/>
+
 
         </LinearLayout>
     </ScrollView>

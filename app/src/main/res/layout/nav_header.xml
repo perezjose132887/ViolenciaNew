@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/ayuda" />
 
     <TextView
-        android:id="@+id/txtNombre"
+        android:id="@+id/txtNombreHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="nombreUsuario"
@@ -24,7 +24,7 @@
         android:textColor="@color/black"/>
 
     <TextView
-        android:id="@+id/txtCorreo"
+        android:id="@+id/txtCorreoHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="correo@gmail.com"

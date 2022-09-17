@@ -12,6 +12,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -22,6 +24,17 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
     Toolbar toolbar;
     ActionBarDrawerToggle toogle;
 
+    TextView nombreHeader,correoHeader;
+
+
+    String idUsuario;
+    String nombres;
+    String primerApellido;
+    String numeroCI;
+    String foto;
+    String correo;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +43,23 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         drawerLayout=findViewById(R.id.drawerLayout);
         navigationView=findViewById(R.id.nav_view);
         toolbar=findViewById(R.id.toolbar);
+        nombreHeader=(TextView) findViewById(R.id.txtNombreHeader);
+        correoHeader=(TextView) findViewById(R.id.txtCorreoHeader);
+
+
+         idUsuario=getIntent().getStringExtra("idUsuario");
+         nombres=getIntent().getStringExtra("nombres");
+         primerApellido=getIntent().getStringExtra("primerApellido");
+         numeroCI=getIntent().getStringExtra("numeroCI");
+         foto=getIntent().getStringExtra("foto");
+         correo=getIntent().getStringExtra("correo");
+
+
+        Toast.makeText(NavigationDrawer.this, ""+nombres+" "+idUsuario, Toast.LENGTH_SHORT).show();
+
+
+
+
 
         getSupportFragmentManager().beginTransaction().add(R.id.content,new AlertaFragment()).commit();
         setTitle("ALERTA");
@@ -93,7 +123,16 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
                 ft.replace(R.id.content,new PreguntasFragment()).commit();
                 break;
             case R.id.nav_denuncia:
-                ft.replace(R.id.content,new DenunciaFragment()).commit();
+                DenunciaFragment denunciaFragment= new DenunciaFragment();
+                Bundle bundle=new Bundle();
+                bundle.putString("idUsuario",idUsuario);
+                bundle.putString("nombres",nombres);
+                denunciaFragment.setArguments(bundle);
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.content,denunciaFragment,null);
+                fragmentTransaction.commit();
+                //ft.replace(R.id.content,new DenunciaFragment()).commit();
                 break;
             case R.id.nav_whatsapp:
                 ft.replace(R.id.content,new WhatsappFragment()).commit();

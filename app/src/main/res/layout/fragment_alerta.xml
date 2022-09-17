@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AlertaFragment">
+    tools:context=".AlertaFragment"
+    android:background="@color/celesteBajoUno">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -12,21 +13,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="55dp"
         android:layout_marginRight="20dp"
         android:text="ALERTA"
         android:textAlignment="center"
         android:layout_marginBottom="15dp"
         android:textColor="@color/celesteFuerteUno"
-        android:textSize="25dp"
+        android:textSize="35dp"
         />
 
     <ImageButton
         android:id="@+id/ibtnAlerta"
         android:layout_width="match_parent"
-        android:layout_height="307dp"
+        android:layout_height="330dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:layout_marginRight="32dp"
         android:adjustViewBounds="false"
         android:scaleType="fitCenter"
@@ -37,20 +38,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textColor="#FF0000"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:text="Obtener coordendas y despues click en la imagen" />
+        android:layout_marginTop="20dp"
+        android:text="Click en la imagen si sufre de violencia" />
 
-    <Button
-        android:id="@+id/btnObtenerCoordenadas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="100dp"
-        android:text="Obtener Coordendas"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="100dp"/>
 
 
     <EditText
@@ -61,7 +55,8 @@
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"
         android:inputType="textPersonName"
-        android:text="" />
+        android:text=""
+        android:visibility="invisible"/>
 
     <EditText
         android:id="@+id/etLongitud"
@@ -71,7 +66,8 @@
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"
         android:inputType="textPersonName"
-        android:text="" />
+        android:text=""
+        android:visibility="invisible"/>
 
 
 </LinearLayout>

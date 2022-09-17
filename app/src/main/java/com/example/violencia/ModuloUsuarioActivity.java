@@ -138,7 +138,7 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
         snombres=nombres.getText().toString().trim();
         sprimerApellido=primerApellido.getText().toString().trim();
         ssegundoApellido=segundoApellido.getText().toString().trim();
-        imagen=getStringImagen(bitmap);
+
         snombreUsuario=nombreUsuario.getText().toString().trim();
         sci=ci.getText().toString().trim();
         scorreo=correo.getText().toString().trim();
@@ -147,54 +147,65 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
         stelefono=telefono.getText().toString().trim();
         sidDepartamento=idDepartamento();
         ssexo=verificarSexo();
-        scontrasena=verificarContrasenas();
+        scontrasena=contrasenaUno.getText().toString().trim();
         srol="usuario";
 
 
         if(snombres.isEmpty() || sprimerApellido.isEmpty() || sci.isEmpty() || snombreUsuario.isEmpty() || scorreo.isEmpty() || scontrasenaUno.isEmpty() || scontrasena2.isEmpty() || stelefono.isEmpty()){
+
             Toast.makeText(getApplicationContext(), "LLene todo los campos", Toast.LENGTH_SHORT).show();
         }else {
-            final ProgressDialog loading = ProgressDialog.show(ModuloUsuarioActivity.this,"Subiendo","Espere porfavr");
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    loading.dismiss();
-                    Toast.makeText(getApplicationContext(), "Registro Exitoso", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(ModuloUsuarioActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    loading.dismiss();
-                    Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
-                }
-            }) {
-                @Nullable
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
+
+            if(scontrasenaUno.equals(scontrasena2)){
+                try {
+                    imagen=getStringImagen(bitmap);
+                    final ProgressDialog loading = ProgressDialog.show(ModuloUsuarioActivity.this,"Subiendo","Espere porfavr");
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            loading.dismiss();
+                            Toast.makeText(getApplicationContext(), "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(ModuloUsuarioActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            loading.dismiss();
+                            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                        }
+                    }) {
+                        @Nullable
+                        @Override
+                        protected Map<String, String> getParams() throws AuthFailureError {
 
 
 
-                    Map<String, String> parametros = new Hashtable<String, String>();
-                    parametros.put("idDepartamento",String.valueOf(sidDepartamento));
-                    parametros.put("nombres", snombres);
-                    parametros.put("primerApellido", sprimerApellido);
-                    parametros.put("segundoApellido", ssegundoApellido);
-                    parametros.put("telefono", stelefono);
-                    parametros.put("ci", sci);
-                    parametros.put("sexo",ssexo);
-                    parametros.put("nombreUsuario", snombreUsuario);
-                    parametros.put("contrasena",scontrasena);
-                    parametros.put("foto",imagen);
-                    parametros.put("correo", scorreo);
-                    parametros.put("rol", srol);
-                    return parametros;
+                            Map<String, String> parametros = new Hashtable<String, String>();
+                            parametros.put("idDepartamento",String.valueOf(sidDepartamento));
+                            parametros.put("nombres", snombres);
+                            parametros.put("primerApellido", sprimerApellido);
+                            parametros.put("segundoApellido", ssegundoApellido);
+                            parametros.put("telefono", stelefono);
+                            parametros.put("ci", sci);
+                            parametros.put("sexo",ssexo);
+                            parametros.put("nombreUsuario", snombreUsuario);
+                            parametros.put("contrasena",scontrasena);
+                            parametros.put("foto",imagen);
+                            parametros.put("correo", scorreo);
+                            parametros.put("rol", srol);
+                            return parametros;
+                        }
+                    };
+                    RequestQueue requestQueue = Volley.newRequestQueue(ModuloUsuarioActivity.this);
+                    requestQueue.add(stringRequest);
+                }catch (Exception e){
+                    Toast.makeText(ModuloUsuarioActivity.this, "Selecciona una foto", Toast.LENGTH_SHORT).show();
                 }
-            };
-            RequestQueue requestQueue = Volley.newRequestQueue(ModuloUsuarioActivity.this);
-            requestQueue.add(stringRequest);
+            }else{
+                Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+            }
         }
 
     }
@@ -218,16 +229,6 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
         return sex;
     }
 
-    //Verificar si las contraseñas coinciden
-    public String verificarContrasenas(){
-        String valor="";
-        if(contrasenaUno.getText().toString().equals(contrasena2.getText().toString())){
-            valor= contrasenaUno.getText().toString();
-        }else{
-            valor= "Las contraseñas no coinciden";
-        }
-        return valor;
-    }
 
 
     //Agregar para el idDepartamento
