@@ -37,6 +37,8 @@ public class ModuloContactoActivity extends AppCompatActivity {
     static final int PICK_CONTACT_REQUEST=1;
     ListView listaContactos;
 
+    String idUsuario,nombres,primerApellido,numeroCI,foto,correo;
+
     AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(ModuloContactoActivity.this,"administracion",null,1);
 
 
@@ -55,12 +57,17 @@ public class ModuloContactoActivity extends AppCompatActivity {
 
 
 
-        String idUsuario=getIntent().getStringExtra("idUsuario");
-        String nombres=getIntent().getStringExtra("nombres");
-        String primerApellido=getIntent().getStringExtra("primerApellido");
-        String numeroCI=getIntent().getStringExtra("numeroCI");
-        String foto=getIntent().getStringExtra("foto");
-        String correo=getIntent().getStringExtra("correo");
+
+        idUsuario=getIntent().getStringExtra("idUsuario");
+        nombres=getIntent().getStringExtra("nombres");
+        primerApellido=getIntent().getStringExtra("primerApellido");
+        numeroCI=getIntent().getStringExtra("numeroCI");
+        foto=getIntent().getStringExtra("foto");
+        correo=getIntent().getStringExtra("correo");
+
+        guardarPreferenciasSesion(idUsuario,nombres,primerApellido,numeroCI,correo);
+        cargarPreferenciasSesionContacto();
+
 
         Toast.makeText(ModuloContactoActivity.this, ""+nombres+" "+idUsuario, Toast.LENGTH_SHORT).show();
 
@@ -140,7 +147,26 @@ public class ModuloContactoActivity extends AppCompatActivity {
 
     }
 
+    public void guardarPreferenciasSesion(String idUsuario,String nombres,String primerApellido,String numeroCI,String correo){
+        SharedPreferences preferencesSesion=getSharedPreferences("sesion",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=preferencesSesion.edit();
+        editor.putString("idUsuario",idUsuario);
+        editor.putString("nombres",nombres);
+        editor.putString("primerApellido",primerApellido);
+        editor.putString("numeroCI",numeroCI);
+        editor.putString("correo",correo);
+        editor.commit();
+    }
 
+    public void cargarPreferenciasSesionContacto(){
+        SharedPreferences preferencesSesion=getSharedPreferences("sesion",Context.MODE_PRIVATE);
+        String idUsuario=preferencesSesion.getString("idUsuario","No encontrado");
+        String nombres=preferencesSesion.getString("nombres","No encontrado");
+        String primerApellido=preferencesSesion.getString("primerApellido","No encontrado");
+        String numeroCI=preferencesSesion.getString("numeroCI","No encontrado");
+        String correo=preferencesSesion.getString("correo","No encontrado");
+        Toast.makeText(this, "Preferences"+nombres+" "+primerApellido, Toast.LENGTH_SHORT).show();
+    }
 
 
     public void eliminarListView(){

@@ -9,6 +9,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -47,12 +49,14 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         correoHeader=(TextView) findViewById(R.id.txtCorreoHeader);
 
 
+
          idUsuario=getIntent().getStringExtra("idUsuario");
          nombres=getIntent().getStringExtra("nombres");
          primerApellido=getIntent().getStringExtra("primerApellido");
          numeroCI=getIntent().getStringExtra("numeroCI");
          foto=getIntent().getStringExtra("foto");
          correo=getIntent().getStringExtra("correo");
+        cargarPreferenciasSesionDrawer();
 
 
         Toast.makeText(NavigationDrawer.this, ""+nombres+" "+idUsuario, Toast.LENGTH_SHORT).show();
@@ -74,6 +78,20 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         navigationView.setNavigationItemSelectedListener(this);
 
     }
+
+
+
+    public void cargarPreferenciasSesionDrawer(){
+        SharedPreferences preferencesSesion=getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        String idUsuario=preferencesSesion.getString("idUsuario","No encontrado");
+        String nombres=preferencesSesion.getString("nombres","No encontrado");
+        String primerApellido=preferencesSesion.getString("primerApellido","No encontrado");
+        String numeroCI=preferencesSesion.getString("numeroCI","No encontrado");
+        String correo=preferencesSesion.getString("correo","No encontrado");
+        Toast.makeText(this, "Preferences"+nombres+" "+primerApellido, Toast.LENGTH_SHORT).show();
+    }
+
+
 
     public ActionBarDrawerToggle setUpDrawerToogle(){
         return new ActionBarDrawerToggle(this,

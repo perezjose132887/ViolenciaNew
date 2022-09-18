@@ -1,7 +1,9 @@
 package com.example.violencia;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -75,6 +77,8 @@ public class DenunciaFragment extends Fragment {
     String nombres;
 
 
+
+
     public DenunciaFragment() {
         // Required empty public constructor
     }
@@ -101,8 +105,8 @@ public class DenunciaFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            idUsuario=getArguments().getString("idUsuario");
-            nombres=getArguments().getString("nombres");
+            //idUsuario=getArguments().getString("idUsuario");
+            //nombres=getArguments().getString("nombres");
         }
     }
 
@@ -117,6 +121,7 @@ public class DenunciaFragment extends Fragment {
         mostrarGaleria=(Button) vista.findViewById(R.id.btnVerGaleria);
         registrarDenuncia=(Button) vista.findViewById(R.id.btnRegistrarDenuncia);
         titulo=(TextView) vista.findViewById(R.id.txtTitulo);
+
 
         Toast.makeText(getContext(), ""+idUsuario+"-"+nombres, Toast.LENGTH_SHORT).show();
 
@@ -206,12 +211,13 @@ public class DenunciaFragment extends Fragment {
 
 
 
-
-
     public void insertarDenuncia(String URL){
         sidCategoria=idCategoria();
         sdeclaracion=declaracion.getText().toString().trim();
         imagenViolencia=getStringImagen(bitmap);
+        SharedPreferences preferences=getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        idUsuario=preferences.getString("idUsuario","No encontrado");
+
 
 
         if(sdeclaracion.isEmpty()){
@@ -253,8 +259,6 @@ public class DenunciaFragment extends Fragment {
         }
 
     }
-
-
 
 
 

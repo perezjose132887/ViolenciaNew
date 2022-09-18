@@ -1,8 +1,10 @@
 package com.example.violencia;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,6 +17,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -30,9 +33,18 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.violencia.Modelo.ModelContactosActivity;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,6 +72,7 @@ public class AlertaFragment extends Fragment {
 
     //To esto es para mandar coordenadas
     EditText latitud, longitud;
+    String slatitud,slongitud,idUsuario;
 
 
 
@@ -140,7 +153,7 @@ public class AlertaFragment extends Fragment {
             public void onClick(View v) {
                 enviarMensaje();
                 llamar();
-
+                insertarAlerta("http://192.168.1.100/violencia/ModuloAlertaActivity.php");
             }
         });
 
@@ -149,6 +162,52 @@ public class AlertaFragment extends Fragment {
 
         return vista;
     }
+
+
+
+
+    public void insertarAlerta(String URL){
+        slatitud=latitud.getText().toString().trim();
+        slongitud=longitud.getText().toString().trim();
+        SharedPreferences preferences=getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        idUsuario=preferences.getString("idUsuario","No encontrado");
+
+
+
+        if(slatitud.isEmpty() && slongitud.isEmpty()){
+            Toast.makeText(getContext(), "LLene todo los campos", Toast.LENGTH_SHORT).show();
+        }else {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    Toast.makeText(getContext(), "Registro Alerta", Toast.LENGTH_SHORT).show();
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                }
+            }) {
+                @Nullable
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+
+                    Map<String, String> parametros = new Hashtable<String, String>();
+                    parametros.put("idUsuario",idUsuario);
+                    parametros.put("latitud", slatitud);
+                    parametros.put("longitud", slongitud);
+                    return parametros;
+                }
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+            requestQueue.add(stringRequest);
+        }
+
+    }
+
+
+
+
 
 
 

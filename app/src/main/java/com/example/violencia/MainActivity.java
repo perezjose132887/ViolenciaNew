@@ -114,6 +114,8 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
             usuario.setFoto(jsonObject.optString("foto"));
             usuario.setCorreo(jsonObject.optString("correo"));
 
+            
+
         }catch(Exception e){
             e.printStackTrace();
         }

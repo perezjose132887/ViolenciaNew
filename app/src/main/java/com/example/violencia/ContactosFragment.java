@@ -82,6 +82,8 @@ public class ContactosFragment extends Fragment {
 
                     SharedPreferences preferences= getActivity().getSharedPreferences("preferenciasLogin", Context.MODE_PRIVATE);
                     preferences.edit().clear().commit();
+                    SharedPreferences preferencesSesion= getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
+                    preferencesSesion.edit().clear().commit();
 
                     Intent intent=new Intent(getContext(),MainActivity.class);
                     startActivity(intent);
