@@ -9,11 +9,11 @@
             android:checked="true"/>
         <item
             android:id="@+id/nav_emergencia"
-            android:title="Emergencia"
+            android:title="Nro. Emergencias"
             android:icon="@drawable/emergencia"/>
         <item
             android:id="@+id/nav_pregunta"
-            android:title="Preguntas"
+            android:title="Información"
             android:icon="@drawable/pregunta"/>
         <item
             android:id="@+id/nav_denuncia"

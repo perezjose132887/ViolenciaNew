@@ -127,7 +127,7 @@ public class AlertaFragment extends Fragment {
         longitud = (EditText) vista.findViewById(R.id.etLongitud);
 
 
-
+        ObtenerCoordenadas();
         //Permiso para gps
         int permissioCheck=ContextCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION);
         if(permissioCheck==PackageManager.PERMISSION_DENIED){
@@ -140,7 +140,7 @@ public class AlertaFragment extends Fragment {
             }
         }
 
-        ObtenerCoordenadas();
+
 
 
 
@@ -153,7 +153,9 @@ public class AlertaFragment extends Fragment {
             public void onClick(View v) {
                 enviarMensaje();
                 llamar();
-                insertarAlerta("http://192.168.1.100/violencia/ModuloAlertaActivity.php");
+                //insertarAlerta("https://codeperez.000webhostapp.com/ModuloAlertaActivity.php");
+                insertarAlerta("https://lucyvalentine.000webhostapp.com/ModuloAlertaActivity.php");
+                //insertarAlerta("http://192.168.1.100/violencia/ModuloAlertaActivity.php");
             }
         });
 
@@ -180,7 +182,7 @@ public class AlertaFragment extends Fragment {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    Toast.makeText(getContext(), "Registro Alerta", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), "Registro Alerta", Toast.LENGTH_SHORT).show();
                 }
             }, new Response.ErrorListener() {
                 @Override

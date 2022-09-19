@@ -72,7 +72,7 @@ public class ModuloContactoActivity extends AppCompatActivity {
         cargarPreferenciasSesionContacto();
 
 
-        Toast.makeText(ModuloContactoActivity.this, ""+nombres+" "+idUsuario, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(ModuloContactoActivity.this, ""+nombres+" "+idUsuario, Toast.LENGTH_SHORT).show();
 
 
         //Permiso para enviar mensajes de ayuda
@@ -194,7 +194,7 @@ public class ModuloContactoActivity extends AppCompatActivity {
         String primerApellido=preferencesSesion.getString("primerApellido","No encontrado");
         String numeroCI=preferencesSesion.getString("numeroCI","No encontrado");
         String correo=preferencesSesion.getString("correo","No encontrado");
-        Toast.makeText(this, "Preferences"+nombres+" "+primerApellido, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Preferences"+nombres+" "+primerApellido, Toast.LENGTH_SHORT).show();
     }
 
 

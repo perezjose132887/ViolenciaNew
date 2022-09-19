@@ -123,7 +123,7 @@ public class DenunciaFragment extends Fragment {
         titulo=(TextView) vista.findViewById(R.id.txtTitulo);
 
 
-        Toast.makeText(getContext(), ""+idUsuario+"-"+nombres, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), ""+idUsuario+"-"+nombres, Toast.LENGTH_SHORT).show();
 
 
         String[] opcionesViolencia={"Violencia Fisica","Violencia Psicológica","Violencia Económica","Violencia Sexual","Violencia Emocional","Otro"};
@@ -144,8 +144,9 @@ public class DenunciaFragment extends Fragment {
         registrarDenuncia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                insertarDenuncia("http://192.168.1.100/violencia/ModuloDenunciaActivity.php");
+                //insertarDenuncia("https://codeperez.000webhostapp.com/ModuloDenunciaActivity.php");
+                insertarDenuncia("https://lucyvalentine.000webhostapp.com/ModuloDenunciaActivity.php");
+                //insertarDenuncia("http://192.168.1.100/violencia/ModuloDenunciaActivity.php");
 
             }
         });
