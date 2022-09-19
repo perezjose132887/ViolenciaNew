@@ -223,7 +223,7 @@ public class DenunciaFragment extends Fragment {
         if(sdeclaracion.isEmpty()){
             Toast.makeText(getContext(), "LLene todo los campos", Toast.LENGTH_SHORT).show();
         }else {
-            final ProgressDialog loading = ProgressDialog.show(getActivity(),"Subiendo","Espere porfavr");
+            final ProgressDialog loading = ProgressDialog.show(getActivity(),"Subiendo","Espere por favor");
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {

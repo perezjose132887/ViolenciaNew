@@ -72,7 +72,7 @@ public class AlertaFragment extends Fragment {
 
     //To esto es para mandar coordenadas
     EditText latitud, longitud;
-    String slatitud,slongitud,idUsuario;
+    String slatitud,slongitud,idUsuario,nombres,primerApellido;
 
 
 
@@ -275,6 +275,9 @@ public class AlertaFragment extends Fragment {
     //Enviar mensje a los contactos seleccionados
     public void enviarMensaje(){
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(getContext(), "administracion", null, 1);
+        SharedPreferences preferences=getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        nombres=preferences.getString("nombres","No encontrado");
+        primerApellido=preferences.getString("primerApellido","No encontrado");
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
         Cursor cursor = BaseDeDatos.rawQuery("SELECT * FROM contactos", null);
         ArrayList<ModelContactosActivity> lista = new ArrayList<ModelContactosActivity>();
@@ -285,9 +288,9 @@ public class AlertaFragment extends Fragment {
             cm.setTelefono(cursor.getString(2));
             lista.add(cm);
         }
-        String mensajeAyuda = "Hola necesito ayuda, mi ubicacion es: \n https://maps.google.com/?q="
+        String mensajeAyuda = "Hola soy "+nombres+" necesito ayuda, mi ubicacion es: \n https://maps.google.com/?q="
                 + latitud.getText().toString().trim() + "," + longitud.getText().toString().trim()
-                +"\n Este mensaje ha sido enviado desde la App Violencia Contra la Mujer";
+                +"\n App Violencia Contra la Mujer";
 
         for (int i = 0; i < lista.size(); i++) {
             //Envia mensajes a todos los contactos seleccionados

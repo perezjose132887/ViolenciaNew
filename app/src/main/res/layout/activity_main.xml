@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:text="Crear Cuenta"
         android:textAlignment="center"
-        android:textSize="16dp"
+        android:textSize="20dp"
         android:textColor="@color/celesteFuerteUno"/>
 
 

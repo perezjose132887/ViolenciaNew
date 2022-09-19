@@ -46,14 +46,13 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
 
 
 
-    EditText nombres,primerApellido,segundoApellido,ci,nombreUsuario,correo,contrasenaUno,contrasena2,telefono;
+    EditText nombres,primerApellido,segundoApellido,ci,correo,contrasenaUno,contrasena2,telefono;
     Spinner departamento;
     RadioButton masculino,femenino;
     String snombres;
     String sprimerApellido;
     String ssegundoApellido;
     String sci;
-    String snombreUsuario;
     String scorreo;
     String scontrasenaUno;
     String scontrasena2;
@@ -81,7 +80,6 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
         primerApellido=(EditText) findViewById(R.id.etPrimerApellido);
         segundoApellido=(EditText) findViewById(R.id.etSegundoApellido);
         ci=(EditText) findViewById(R.id.etCi);
-        nombreUsuario=(EditText) findViewById(R.id.etNombreUsuario);
         correo=(EditText) findViewById(R.id.etCorreo);
         contrasenaUno=(EditText) findViewById(R.id.etPrimerContrasena);
         contrasena2=(EditText) findViewById(R.id.etSegundoContrasena);
@@ -90,7 +88,7 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
         femenino=(RadioButton) findViewById(R.id.rbtnMujer);
 
 
-        String[] opcionesDepa={"Cochabamba","La Paz","Oruro","Potosi","Tarija","Chuquisaca","Santa Cruz","Beni","Pando"};
+        String[] opcionesDepa={"Beni","Chuquisaca","Cochabamba","La Paz","Oruro","Pando","Potosi","Santa Cruz ","Tarija"};
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,R.layout.spinner_departamento_item_jose,opcionesDepa);
         departamento.setAdapter(adapter);
 
@@ -139,7 +137,6 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
         sprimerApellido=primerApellido.getText().toString().trim();
         ssegundoApellido=segundoApellido.getText().toString().trim();
 
-        snombreUsuario=nombreUsuario.getText().toString().trim();
         sci=ci.getText().toString().trim();
         scorreo=correo.getText().toString().trim();
         scontrasenaUno=contrasenaUno.getText().toString().trim();
@@ -151,7 +148,7 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
         srol="usuario";
 
 
-        if(snombres.isEmpty() || sprimerApellido.isEmpty() || sci.isEmpty() || snombreUsuario.isEmpty() || scorreo.isEmpty() || scontrasenaUno.isEmpty() || scontrasena2.isEmpty() || stelefono.isEmpty()){
+        if(snombres.isEmpty() || sprimerApellido.isEmpty() || sci.isEmpty() ||  scorreo.isEmpty() || scontrasenaUno.isEmpty() || scontrasena2.isEmpty() || stelefono.isEmpty()){
 
             Toast.makeText(getApplicationContext(), "LLene todo los campos", Toast.LENGTH_SHORT).show();
         }else {
@@ -159,7 +156,7 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
             if(scontrasenaUno.equals(scontrasena2)){
                 try {
                     imagen=getStringImagen(bitmap);
-                    final ProgressDialog loading = ProgressDialog.show(ModuloUsuarioActivity.this,"Subiendo","Espere porfavr");
+                    final ProgressDialog loading = ProgressDialog.show(ModuloUsuarioActivity.this,"Subiendo","Espere por favor");
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -190,7 +187,6 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
                             parametros.put("telefono", stelefono);
                             parametros.put("ci", sci);
                             parametros.put("sexo",ssexo);
-                            parametros.put("nombreUsuario", snombreUsuario);
                             parametros.put("contrasena",scontrasena);
                             parametros.put("foto",imagen);
                             parametros.put("correo", scorreo);
@@ -234,28 +230,28 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
     //Agregar para el idDepartamento
     public int idDepartamento(){
         int valor=0;
-        if (departamento.getSelectedItem().toString()=="Cochabamba") {
+        if (departamento.getSelectedItem().toString()=="Beni") {
             valor=1;
         }else{
-            if (departamento.getSelectedItem().toString()=="La Paz") {
+            if (departamento.getSelectedItem().toString()=="Chuquisaca") {
                 valor=2;
             }else{
-                if (departamento.getSelectedItem().toString()=="Oruro") {
+                if (departamento.getSelectedItem().toString()=="Cochabamba") {
                     valor=3;
                 }else{
-                    if (departamento.getSelectedItem().toString()=="Potosi") {
+                    if (departamento.getSelectedItem().toString()=="La Paz") {
                         valor=4;
                     }else{
-                        if (departamento.getSelectedItem().toString()=="Tarija") {
+                        if (departamento.getSelectedItem().toString()=="Oruro") {
                             valor=5;
                         }else{
-                            if (departamento.getSelectedItem().toString()=="Chuquisaca") {
+                            if (departamento.getSelectedItem().toString()=="Pando") {
                                 valor=6;
                             }else{
-                                if (departamento.getSelectedItem().toString()=="Santa Cruz") {
+                                if (departamento.getSelectedItem().toString()=="Potosi") {
                                     valor=7;
                                 }else{
-                                    if (departamento.getSelectedItem().toString()=="Beni") {
+                                    if (departamento.getSelectedItem().toString()=="Santa Cruz") {
                                         valor=8;
                                     }else{
                                         valor=9;

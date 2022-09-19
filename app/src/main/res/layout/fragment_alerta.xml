@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:text="ALERTA"
         android:textAlignment="center"
@@ -21,6 +21,17 @@
         android:textColor="@color/celesteFuerteUno"
         android:textSize="35dp"
         />
+    <TextView
+        android:id="@+id/tvImportante1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Presionar en la imagen si se encuentra en caso de violencia"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="#FF0000"/>
 
     <ImageButton
         android:id="@+id/ibtnAlerta"
@@ -38,12 +49,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textColor="#FF0000"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginTop="20dp"
-        android:text="Click en la imagen si sufre de violencia" />
+        android:text="PONGAMOS FIN A LA VIOLENCIA CONTRA LAS MUJERES" />
 
 
 
@@ -52,8 +63,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
         android:inputType="textPersonName"
         android:text=""/>
 
@@ -62,8 +73,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
         android:inputType="textPersonName"
         android:text=""/>
 

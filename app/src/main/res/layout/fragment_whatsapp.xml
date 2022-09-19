@@ -34,77 +34,26 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
                 android:src="@drawable/whatsappcolor"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"/>
 
 
-            <Button
-                android:id="@+id/btnCochabamba"
+            <TextView
+                android:id="@+id/tvImportante2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="#1EBEA5"
-                android:text="Cochabamba"/>
-            <Button
-                android:id="@+id/btnLaPaz"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="#1EBEA5"
-                android:text="La Paz" />
-            <Button
-                android:id="@+id/btnOruro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="#1EBEA5"
-                android:text="Oruro" />
-            <Button
-                android:id="@+id/btnPotosi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="#1EBEA5"
-                android:text="Potosi" />
-            <Button
-                android:id="@+id/btnTarija"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="#1EBEA5"
-                android:text="Tarija" />
-            <Button
-                android:id="@+id/btnChuquisaca"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="#1EBEA5"
-                android:text="Chuquisaca" />
-            <Button
-                android:id="@+id/btnSantaCruz"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="#1EBEA5"
-                android:text="Santa Cruz" />
+                android:text="Números de WhatsApp de cada departamento para realizar consultas e informacion sobre la violencia contra la mujer"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:textColor="#FF0000"/>
+
             <Button
                 android:id="@+id/btnBeni"
                 android:layout_width="match_parent"
@@ -113,7 +62,43 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="100dp"
                 android:backgroundTint="#1EBEA5"
-                android:text="Beni" />
+                android:text="Beni (FELCV)" />
+            <Button
+                android:id="@+id/btnChuquisaca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="100dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Chuquisaca (FELCV)" />
+            <Button
+                android:id="@+id/btnCochabamba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="100dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Cochabamba (FELCV)"/>
+            <Button
+                android:id="@+id/btnLaPaz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="100dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="La Paz (FELCV)" />
+            <Button
+                android:id="@+id/btnOruro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="100dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Oruro (FELCV)" />
             <Button
                 android:id="@+id/btnPando"
                 android:layout_width="match_parent"
@@ -122,8 +107,39 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="100dp"
                 android:backgroundTint="#1EBEA5"
-                android:text="Pando"
+                android:text="Pando (FELCV)"/>
+            <Button
+                android:id="@+id/btnPotosi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="100dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Potosi (FELCV)" />
+            <Button
+                android:id="@+id/btnSantaCruz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="100dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Santa Cruz (FELCV)" />
+            <Button
+                android:id="@+id/btnTarija"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="100dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Tarija (FELCV)"
                 android:layout_marginBottom="20dp"/>
+
+
+
+
 
 
 

@@ -1,14 +1,17 @@
 package com.example.violencia;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.LocationRequest;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -90,6 +93,29 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
     }
 
 
+    @Override
+    public void onBackPressed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("¿Desea salir de la App?")
+                .setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
+                        intent.addCategory(Intent.CATEGORY_HOME);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        builder.show();
+    }
+
+
 
 
     @Override
@@ -120,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
             e.printStackTrace();
         }
 
-        Intent intent= new Intent(MainActivity.this,ModuloContactoActivity.class);
+        Intent intent= new Intent(MainActivity.this,SplashActivity.class);
         intent.putExtra("idUsuario",usuario.getIdUsuario());
         intent.putExtra("nombres",usuario.getNombres());
         intent.putExtra("primerApellido",usuario.getPrimerApellido());

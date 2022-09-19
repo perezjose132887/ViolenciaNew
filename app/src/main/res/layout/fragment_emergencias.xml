@@ -22,6 +22,43 @@
             android:background="@color/celesteBajoUno"
             android:orientation="vertical">
 
+
+            <TextView
+                android:id="@+id/NumeroEmerg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="NUMEROS DE EMERGENCIAS"
+                android:textAlignment="center"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="26dp" />
+
+
+            <TextView
+                android:id="@+id/NumeroEmerge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Presione en la imagen para realizar la llamada"
+                android:textAlignment="center"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="@color/celesteFuerteUno"
+                android:textSize="10sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"/>
+
             <TextView
                 android:id="@+id/txtPatrulla"
                 android:layout_width="match_parent"
@@ -49,7 +86,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="Click en la imagen para llamar"
+                android:text="Presione en la imagen para llamar"
                 android:textColor="	#FF0000"
                 android:textSize="18dp" />
             <TextView
@@ -58,7 +95,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="El ministro de Gobierno, Eduardo Del Castillo, participó del acto de relanzamiento de Radio Patrulla 110, que tiene como objetivo optimizar el servicio de patrullaje de prevención y auxilio que brinda esta unidad de la Policía Boliviana."
+                android:text="Tiene la misión específica de la defensa de la sociedad y la conservación del orden público, y el cumplimiento de las leyes en todo el territorio boliviano."
                 android:textSize="20dp" />
 
 
@@ -109,7 +146,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="Click en la imagen para llamar"
+                android:text="Presione en la imagen para llamar"
                 android:textColor="	#FF0000"
                 android:textSize="18dp" />
 
@@ -119,7 +156,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="-Supervisión de las rutas de evacuación y salidas de emergencia. -Supervisión y colocación de los extintores contra incendios. -Atención de cualquier paciente o lesionado que se pudiera suscitar durante el evento. -Traslados ilimitados de urgencia al hospital más próximo, si así lo requiere el servicio."
+                android:text="Tiene la misión brindar la mejor atención médica de urgencias en el ámbito prehospitalário, de manera oportuna, profesional y eficaz, pero sobre todo con calidez humana."
                 android:textSize="20dp" />
 
 
@@ -163,7 +200,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="Click en la imagen para llamar"
+                android:text="Presione en la imagen para llamar"
                 android:textColor="	#FF0000"
                 android:textSize="18dp" />
 
@@ -173,7 +210,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Salvar vidas y proteger bienes inmuebles con acciones oportunas y eficientes en la lucha contra el fuego, atención prehospitalaria, rescate y salvamento, atender en caso de emergencias por desastres naturales y/o producidos por el ser humano."
+                android:text="Tiene la misión de salvar vidas y proteger bienes inmuebles en la lucha contra el fuego, atender en caso de emergencias por desastres naturales y/o producidos por el ser humano"
                 android:textSize="20dp" />
 
 
@@ -220,7 +257,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="Click en la imagen para llamar"
+                android:text="Presione en la imagen para llamar"
                 android:textColor="	#FF0000"
                 android:textSize="18dp" />
 
@@ -230,7 +267,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Difundir, promover y proteger los derechos de los niños, niñas y adolescentes (NNA) de acuerdo a lo que establece la ley. Interponer acciones y presentar querellas cuando conozcamos delitos en que las víctimas sean NNA, y la ley lo autorice."
+                android:text="Tiene la misión de promover y defender los derechos humanos de niñas, niños adolescentes, para lograr su reconocimiento y el ejercicio pleno de su condición de sujetos sociales y ciudadanos."
                 android:textSize="20dp" />
 
 
@@ -278,7 +315,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="Click en la imagen para llamar"
+                android:text="Presione en la imagen para llamar"
                 android:textColor="	#FF0000"
                 android:textSize="18dp" />
 
@@ -288,7 +325,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Garantizar la fluidez y seguridad del tránsito terrestre de personas y vehículos y del transporte público y privado mediante la planeación, organización y control del tránsito municipal, la aplicación de las normas que regulan esta materia, la imposición de sanciones y multas correspondientes a las infracciones y la organización ágil y eficiente del registro de vehículos y conductores de conformidad con las competencias asignadas por la ley y los reglamentos."
+                android:text="Tiene la misión de garantizar la seguridad del tránsito terrestre de personas y vehículos y del transporte público y privado mediante la organización y control del tránsito municipal."
                 android:textSize="20dp" />
 
 
@@ -332,7 +369,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="Click en la imagen para llamar"
+                android:text="Presione en la imagen para llamar"
                 android:textColor="	#FF0000"
                 android:textSize="18dp" />
 
@@ -342,7 +379,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="SAR-FAB tiene por misión planificar, coordinar y ejecutar la búsqueda y salvamento de vidas humanas y materiales en casos de accidentes aéreos, militares y civiles, catástrofes que sean producidos por fenómenos naturales o accidentes de guerra en coordinación con Defensa Civil y otras instituciones a fin de mantener la capacidad operativa de la aeronáutica nacional salvaguardando el bienestar de la población damnificada."
+                android:text="Tiene la misión de planificar, coordinar y ejecutar misiones de búsqueda, rescate y salvamento de vidas humanas en caso de accidentes aeronáuticos y catástrofes naturales."
                 android:textSize="20dp" />
 
 

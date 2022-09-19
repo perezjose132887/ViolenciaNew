@@ -28,10 +28,31 @@
         android:text="DENUNCIAS"
         android:textAlignment="center"
         android:textColor="@color/celesteFuerteUno"
-        android:textSize="25dp"
-        />
+        android:textSize="25dp"/>
 
+            <TextView
+                android:id="@+id/tvImportante2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Llene el siguiente formulario en caso de que sufrió algun tipo de violencia. Estos registros te servirán como respaldo para futuras denuncias."
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="#FF0000"/>
 
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="@color/celesteFuerteUno"
+                android:textSize="10sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,7 +73,17 @@
         android:layout_marginRight="50dp"
         android:backgroundTint="@color/celesteBajoDos"/>
 
-
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="2sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -77,6 +108,28 @@
         android:background="#F3AAD8"
         android:inputType="textMultiLine" />
 
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="2sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:id="@+id/tvImportante4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(OPCIONAL) Adjunte una foto en caso de tener algunas evidencias"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                android:textColor="#FF0000"/>
     <Button
         android:id="@+id/btnVerGaleria"
         android:layout_width="match_parent"
@@ -93,7 +146,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_nombreusuario" />
+        android:src="@drawable/ic_menu_gallery" />
 
 
 
@@ -106,6 +159,7 @@
         android:layout_marginLeft="80dp"
         android:layout_marginRight="80dp"
         android:layout_marginTop="20dp"
+                android:layout_marginBottom="20sp"
         android:backgroundTint="@color/celesteFuerteUno"/>
 
 

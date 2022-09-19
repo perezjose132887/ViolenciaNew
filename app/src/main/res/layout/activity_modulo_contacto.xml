@@ -18,11 +18,22 @@
         android:layout_marginRight="20dp"
         android:text="CONTACTOS"
         android:textAlignment="center"
-        android:layout_marginBottom="15dp"
-
+        android:layout_marginBottom="10dp"
         android:textColor="@color/celesteFuerteUno"
-        android:textSize="25dp"
+        android:textSize="30dp"
         />
+
+    <TextView
+        android:id="@+id/tvImportante1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IMPORTANTE: Seleccione sus contactos de confianza para pedir ayuda en cualquier caso de Alerta"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FF0000"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -102,7 +113,7 @@
                 android:id="@+id/btnContinuar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CONTINUAR"
+                android:text="SIGUIENTE"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="30dp"
                 android:backgroundTint="@color/celesteFuerteUno"/>
@@ -115,7 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ELIMINAR LISTA"
-        android:layout_marginLeft="88dp"
+        android:layout_marginLeft="120dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/celesteFuerteUno"/>
     <ListView
