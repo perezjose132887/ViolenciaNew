@@ -214,6 +214,9 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
             case R.id.nav_contactos:
                 ft.replace(R.id.content,new ContactosFragment()).commit();
                 break;
+            case R.id.nav_test:
+                ft.replace(R.id.content,new TestFragment()).commit();
+                break;
         }
         setTitle(item.getTitle());
         drawerLayout.closeDrawers();

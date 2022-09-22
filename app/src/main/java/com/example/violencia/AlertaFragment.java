@@ -154,8 +154,8 @@ public class AlertaFragment extends Fragment {
                 enviarMensaje();
                 llamar();
                 //insertarAlerta("https://codeperez.000webhostapp.com/ModuloAlertaActivity.php");
-                insertarAlerta("https://lucyvalentine.000webhostapp.com/ModuloAlertaActivity.php");
-                //insertarAlerta("http://192.168.1.100/violencia/ModuloAlertaActivity.php");
+                //insertarAlerta("https://lucyvalentine.000webhostapp.com/ModuloAlertaActivity.php");
+                insertarAlerta("http://192.168.1.100/violencia/ModuloAlertaActivity.php");
             }
         });
 

@@ -32,6 +32,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".FaseTresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FaseDosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FaseUnoActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="false" />
         <activity

@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/ic_contacto.xml" value="0.184" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/ic_nombreusuario.xml" value="0.1865" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/side_nav_bar.xml" value="0.185" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_fase_uno.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_main2.xml" value="0.16847826086956522" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_modulo_alerta.xml" value="0.25" />
@@ -23,6 +25,7 @@
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_emergenia.xml" value="0.18795289855072464" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_pregunta.xml" value="0.18795289855072464" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_preguntas.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_test.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_whats_app.xml" value="0.25" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_whatsapp.xml" value="0.18478260869565216" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/nav_header.xml" value="0.22" />

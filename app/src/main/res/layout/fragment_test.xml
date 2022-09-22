@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestFragment"
+    android:orientation="vertical"
+    android:background="@color/celesteBajoUno">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TEST PSICOLÓGICO"
+        android:gravity="center"
+        android:textColor="@color/celesteFuerteUno"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+
+    <TextView
+        android:id="@+id/tvImportante2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A continuación, te ofrecemos un test de 5 preguntas de cada fase con el que puedes detectar si sufres o has sufrido en algun momento violencia contra la mujer por parte de tu pareja."
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="#FF0000"/>
+
+    <TextView
+        android:id="@+id/tvImportante3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ES IMPORTANTE CONTESTAR CON SINCERIDAD AL TEST, YA QUE SOLO PRETENDEMOS AYUDARTE"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:textSize="19sp"
+        android:textColor="#FF0000"/>
+
+    <Button
+        android:id="@+id/btnFaseUno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="#1EBEA5"
+        android:textSize="18sp"
+        android:text="Test de violencia fase 1" />
+
+    <Button
+        android:id="@+id/btnFaseDos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="100dp"
+        android:textSize="18sp"
+        android:backgroundTint="#1EBEA5"
+        android:text="Test de violencia fase 2" />
+    <Button
+        android:id="@+id/btnFaseTres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="100dp"
+        android:textSize="18sp"
+        android:backgroundTint="#1EBEA5"
+        android:text="Test de violencia fase 3" />
+
+</LinearLayout>

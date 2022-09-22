@@ -23,6 +23,10 @@
             android:id="@+id/nav_whatsapp"
             android:title="Consultas WhatsApp"
             android:icon="@drawable/whatsapp"/>
+        <item
+            android:id="@+id/nav_test"
+            android:title="Test Psicológico"
+            android:icon="@drawable/prueba"/>
     </group>
 
     <item android:title="Social">
