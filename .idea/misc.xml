@@ -6,7 +6,9 @@
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/ic_contacto.xml" value="0.184" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/ic_nombreusuario.xml" value="0.1865" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/side_nav_bar.xml" value="0.185" />
-        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_fase_uno.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_fase_dos.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_fase_tres.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_fase_uno.xml" value="0.1" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_main2.xml" value="0.16847826086956522" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_modulo_alerta.xml" value="0.25" />
@@ -14,6 +16,7 @@
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_modulo_usuario.xml" value="0.25" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.25" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_presentacion.xml" value="0.19384057971014493" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_resultado_fase.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/app_bar_navigation_drawer.xml" value="0.18795289855072464" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/content_navigation_drawer.xml" value="0.18795289855072464" />

@@ -1,9 +1,430 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FaseTresActivity">
+    android:orientation="vertical"
+    tools:context=".FaseTresActivity"
+    android:background="@color/celesteBajoUno">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:id="@+id/scba"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/lnya"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TEST DE VIOLENCIA FASE 2"
+                android:gravity="center"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="30sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+
+            <TextView
+                android:id="@+id/tvImportante3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/celesteBajoDos"/>
+
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p1r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NUNCA"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"
+                    tools:ignore="TouchTargetSizeCheck"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p1r2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EN OCACIONES"
+                    android:layout_marginLeft="120dp"
+                    android:textSize="20sp"
+                    tools:ignore="TouchTargetSizeCheck"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p1r3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CASI SIEMPRE"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"
+                    tools:ignore="TouchTargetSizeCheck"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etResult1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginRight="150dp"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="@color/celesteFuerteUno"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"/>
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/tvImportante4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/celesteBajoDos"/>
+
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p2r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NUNCA"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p2r2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EN OCACIONES"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p2r3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CASI SIEMPRE"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"/>
+
+            </RadioGroup>
+            <EditText
+                android:id="@+id/etResult2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginRight="150dp"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="@color/celesteFuerteUno"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"/>
+
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/tvImportante5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/celesteBajoDos"/>
+
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p3r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NUNCA"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p3r2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EN OCACIONES"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p3r3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CASI SIEMPRE"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"/>
+
+            </RadioGroup>
+            <EditText
+                android:id="@+id/etResult3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginRight="150dp"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="@color/celesteFuerteUno"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/tvImportante6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/celesteBajoDos"/>
+
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p4r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NUNCA"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p4r2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EN OCACIONES"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p4r3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CASI SIEMPRE"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="120dp"/>
+
+            </RadioGroup>
+            <EditText
+                android:id="@+id/etResult4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginRight="150dp"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="@color/celesteFuerteUno"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/tvImportante7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/celesteBajoDos"/>
+
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p5r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NUNCA"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="150dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p5r2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EN OCACIONES"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="150dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnf3p5r3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CASI SIEMPRE"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="150dp"/>
+
+            </RadioGroup>
+            <EditText
+                android:id="@+id/etResult5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginRight="150dp"
+                />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="@color/celesteFuerteUno"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"/>
+
+
+
+
+
+
+
+            <Button
+                android:id="@+id/btnVerificarFaseTres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/celesteFuerteUno"
+                android:text="Registrarse" />
+
+
+            <EditText
+                android:id="@+id/etResultadoFaseTres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginRight="150dp"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

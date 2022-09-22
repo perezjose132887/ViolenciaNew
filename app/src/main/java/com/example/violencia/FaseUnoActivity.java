@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +38,7 @@ public class FaseUnoActivity extends AppCompatActivity {
     String Uno="1",Dos="2",Tres="3",sresult1,sresult2,sresult3,sresult4,sresult5,idUsuario,sresultadoFaseUno;
 
     String idNombreFaseUno="1";
+    int resultado=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,15 +79,11 @@ public class FaseUnoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 CalificarFaseUno();
-                try {
-
-                    Thread.sleep(5*1000);
-                    RegistrarUno("http://192.168.1.100/violencia/registrarFaseUno.php");
-                    //Toast.makeText(FaseUnoActivity.this, "Hola Mundo", Toast.LENGTH_SHORT).show();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
+                RegistrarUno("http://192.168.1.100/violencia/registrarFaseUno.php");
+                Intent intent=new Intent(FaseUnoActivity.this,ResultadoFaseActivity.class);
+                intent.putExtra("resultadoFase",resultadoFaseUno.getText().toString());
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -99,7 +97,7 @@ public class FaseUnoActivity extends AppCompatActivity {
 
 
 
-    public void RegistrarUno(String URL){
+    private void RegistrarUno(String URL){
         sresult1=result1.getText().toString().trim();
         sresult2=result2.getText().toString().trim();
         sresult3=result3.getText().toString().trim();
@@ -156,9 +154,7 @@ public class FaseUnoActivity extends AppCompatActivity {
 
 
 
-    public void CalificarFaseUno(){
-
-        int resultado=0;
+    private void CalificarFaseUno(){
         if(f1p1r1.isChecked()){
             resultado+=1;
             result1.setText(Uno);
