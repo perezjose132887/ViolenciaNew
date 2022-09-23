@@ -79,7 +79,8 @@ public class FaseUnoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 CalificarFaseUno();
-                RegistrarUno("http://192.168.1.100/violencia/registrarFaseUno.php");
+                //RegistrarUno("http://192.168.1.100/violencia/registrarFaseUno.php");
+                RegistrarUno("https://luchacontralaviolencia.000webhostapp.com/registrarFaseUno.php");
                 Intent intent=new Intent(FaseUnoActivity.this,ResultadoFaseActivity.class);
                 intent.putExtra("resultadoFase",resultadoFaseUno.getText().toString());
                 startActivity(intent);

@@ -125,9 +125,6 @@ public class AlertaFragment extends Fragment {
         alerta = (ImageButton) vista.findViewById(R.id.ibtnAlerta);
         latitud = (EditText) vista.findViewById(R.id.etLatitud);
         longitud = (EditText) vista.findViewById(R.id.etLongitud);
-
-
-        ObtenerCoordenadas();
         //Permiso para gps
         int permissioCheck=ContextCompat.checkSelfPermission(getContext(),Manifest.permission.ACCESS_FINE_LOCATION);
         if(permissioCheck==PackageManager.PERMISSION_DENIED){
@@ -139,6 +136,10 @@ public class AlertaFragment extends Fragment {
                         new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
             }
         }
+
+
+        ObtenerCoordenadas();
+
 
 
 
@@ -154,8 +155,8 @@ public class AlertaFragment extends Fragment {
                 enviarMensaje();
                 llamar();
                 //insertarAlerta("https://codeperez.000webhostapp.com/ModuloAlertaActivity.php");
-                //insertarAlerta("https://lucyvalentine.000webhostapp.com/ModuloAlertaActivity.php");
-                insertarAlerta("http://192.168.1.100/violencia/ModuloAlertaActivity.php");
+                insertarAlerta("https://https://luchacontralaviolencia.000webhostapp.com/ModuloAlertaActivity.php");
+                //insertarAlerta("http://192.168.1.100/violencia/ModuloAlertaActivity.php");
             }
         });
 
@@ -310,7 +311,7 @@ public class AlertaFragment extends Fragment {
     //Realizar la llamada al 911
     public void llamar(){
         String phone = "tel:800140348";
-        Intent intent = new Intent(Intent.ACTION_DIAL);
+        Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse(phone));
         startActivity(intent);
     }

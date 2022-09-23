@@ -86,6 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -112,7 +113,7 @@
                 android:id="@+id/tvImportante4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:text="¿Te amenaza o chantajea?"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -158,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -185,7 +187,7 @@
                 android:id="@+id/tvImportante5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:text="¿Te grita, se burla de ti, te humilla?"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -231,6 +233,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -259,7 +262,7 @@
                 android:id="@+id/tvImportante6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:text="¿Controla tu forma de vestir?"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -305,6 +308,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -333,7 +337,7 @@
                 android:id="@+id/tvImportante7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:text="¿Controla tu hora de salida, de llegada, o uso del tiempo en general?"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -379,6 +383,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -415,7 +420,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
-                android:layout_marginRight="150dp"/>
+                android:layout_marginRight="150dp"
+                android:visibility="invisible"/>
 
 
         </LinearLayout>

@@ -38,7 +38,7 @@
                 android:id="@+id/tvImportante3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:text="¿Tienes miedo a tu pareja?"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -88,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -114,7 +115,7 @@
                 android:id="@+id/tvImportante4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:text="¿Te amenaza con hacerse daño o suicidarse si se acaba la relación?"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -160,6 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -187,7 +189,7 @@
                 android:id="@+id/tvImportante5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:text="¿Te amenaza con hacerte daño o dañar a tu familia si terminas la relación?"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -233,6 +235,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -261,7 +264,7 @@
                 android:id="@+id/tvImportante6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:text="¿Estás deprimida y con problema de salud, o has tenido pensamientos suicidas?"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -307,6 +310,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -335,7 +339,7 @@
                 android:id="@+id/tvImportante7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Te culpa por sus cambios de ánimo, malestares, o frustraciones propias?"
+                android:text="¿Las reacciones de violencia son impredecibles y más recurrentes?"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -381,6 +385,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginRight="150dp"
+                android:visibility="invisible"
                 />
 
             <TextView
@@ -417,7 +422,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
-                android:layout_marginRight="150dp"/>
+                android:layout_marginRight="150dp"
+                android:visibility="invisible"/>
 
 
         </LinearLayout>
