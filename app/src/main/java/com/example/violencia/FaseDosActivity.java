@@ -80,8 +80,8 @@ public class FaseDosActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 CalificarFaseDos();
-                //RegistrarDos("http://192.168.1.100/violencia/registrarFaseUno.php");
-                RegistrarDos("https://luchacontralaviolencia.000webhostapp.com/registrarFaseUno.php");
+                RegistrarDos("http://192.168.1.100/violencia/registrarFaseUno.php");
+                //RegistrarDos("https://luchacontralaviolencia.000webhostapp.com/registrarFaseUno.php");
                 Intent intent=new Intent(FaseDosActivity.this,ResultadoFaseActivity.class);
                 intent.putExtra("resultadoFase",resultadoFaseDos.getText().toString());
                 startActivity(intent);

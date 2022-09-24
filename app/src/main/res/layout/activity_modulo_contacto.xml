@@ -9,12 +9,18 @@
     android:background="@color/celesteBajoUno">
 
 
+    <ImageButton
+        android:id="@+id/imgAtras"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/atras"/>
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
         android:layout_marginRight="20dp"
         android:text="CONTACTOS"
         android:textAlignment="center"
@@ -92,42 +98,22 @@
     </LinearLayout>
 
 
-
-
-
-
-    <LinearLayout
+    <Button
+        android:id="@+id/btnGuardarContacto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-            <Button
-                android:id="@+id/btnGuardarContacto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  GUARDAR  "
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="15dp"
-                android:backgroundTint="@color/celesteFuerteUno"/>
-
-            <Button
-                android:id="@+id/btnContinuar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SIGUIENTE"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="30dp"
-                android:backgroundTint="@color/celesteFuerteUno"/>
-    </LinearLayout>
-
-
+        android:text="GUARDAR EN LA LISTA"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:backgroundTint="@color/celesteFuerteUno"/>
 
     <Button
         android:id="@+id/btnEliminarLista"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ELIMINAR LISTA"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
         android:backgroundTint="@color/celesteFuerteUno"/>
     <ListView
         android:id="@+id/lvListaContactos"
@@ -138,6 +124,7 @@
         android:layout_marginRight="32dp"
         android:backgroundTint="#34E91E63"
         android:background="@color/celesteBajoDos"/>
+
 
 
 

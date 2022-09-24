@@ -34,13 +34,13 @@ import java.util.ArrayList;
 
 public class ModuloContactoActivity extends AppCompatActivity {
 
-    Button eliminarLista,guardar,continuar;;
-    ImageButton seleccionar;
+    Button eliminarLista,guardar;
+    ImageButton seleccionar,atras;
     EditText nombreContacto,telefono;
     static final int PICK_CONTACT_REQUEST=1;
     ListView listaContactos;
 
-    String idUsuario,nombres,primerApellido,numeroCI,foto,correo;
+
 
     AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(ModuloContactoActivity.this,"administracion",null,1);
 
@@ -55,20 +55,22 @@ public class ModuloContactoActivity extends AppCompatActivity {
         nombreContacto=(EditText) findViewById(R.id.etNombreContacto);
         telefono=(EditText) findViewById(R.id.etTelefono);
         guardar=(Button) findViewById(R.id.btnGuardarContacto);
-        continuar=(Button) findViewById(R.id.btnContinuar);
         listaContactos=(ListView) findViewById(R.id.lvListaContactos);
+        atras= (ImageButton) findViewById(R.id.imgAtras);
+
+        String idUsuario=getIntent().getStringExtra("idUsuario");
+        String nombres=getIntent().getStringExtra("nombres");
+        String primerApellido=getIntent().getStringExtra("primerApellido");
+        String numeroCI=getIntent().getStringExtra("numeroCI");
+        String foto=getIntent().getStringExtra("foto");
+        String correo=getIntent().getStringExtra("correo");
 
 
 
 
-        idUsuario=getIntent().getStringExtra("idUsuario");
-        nombres=getIntent().getStringExtra("nombres");
-        primerApellido=getIntent().getStringExtra("primerApellido");
-        numeroCI=getIntent().getStringExtra("numeroCI");
-        foto=getIntent().getStringExtra("foto");
-        correo=getIntent().getStringExtra("correo");
 
-        guardarPreferenciasSesion(idUsuario,nombres,primerApellido,numeroCI,correo);
+
+
         cargarPreferenciasSesionContacto();
 
 
@@ -105,7 +107,7 @@ public class ModuloContactoActivity extends AppCompatActivity {
 
 
         //Click para segui avanzando de contactos a alerta
-        continuar.setOnClickListener(new View.OnClickListener() {
+        /*continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(ModuloContactoActivity.this,NavigationDrawer.class);
@@ -118,7 +120,7 @@ public class ModuloContactoActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        });
+        });*/
 
 
 
@@ -146,6 +148,21 @@ public class ModuloContactoActivity extends AppCompatActivity {
         listarContactos();
 
 
+
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ModuloContactoActivity.this,MenuOpcionesActivity.class);
+                intent.putExtra("idUsuario",idUsuario);
+                intent.putExtra("nombres",nombres);
+                intent.putExtra("primerApellido",primerApellido);
+                intent.putExtra("numeroCI",numeroCI);
+                intent.putExtra("foto",foto);
+                intent.putExtra("correo",correo);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
     }
@@ -176,16 +193,7 @@ public class ModuloContactoActivity extends AppCompatActivity {
 
 
 
-    public void guardarPreferenciasSesion(String idUsuario,String nombres,String primerApellido,String numeroCI,String correo){
-        SharedPreferences preferencesSesion=getSharedPreferences("sesion",Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor=preferencesSesion.edit();
-        editor.putString("idUsuario",idUsuario);
-        editor.putString("nombres",nombres);
-        editor.putString("primerApellido",primerApellido);
-        editor.putString("numeroCI",numeroCI);
-        editor.putString("correo",correo);
-        editor.commit();
-    }
+
 
     public void cargarPreferenciasSesionContacto(){
         SharedPreferences preferencesSesion=getSharedPreferences("sesion",Context.MODE_PRIVATE);
@@ -286,7 +294,9 @@ public class ModuloContactoActivity extends AppCompatActivity {
         }
     }
 
-    private ArrayList<ModelContactosActivity> obtenerContactos() {
+
+
+    public ArrayList<ModelContactosActivity> obtenerContactos() {
         SQLiteDatabase BaseDeDatos=admin.getWritableDatabase();
         //select * from contactos
         Cursor cursor= BaseDeDatos.rawQuery("SELECT * FROM contactos",null);

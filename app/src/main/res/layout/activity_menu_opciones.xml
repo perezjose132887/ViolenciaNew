@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MenuOpcionesActivity"
+    android:background="@color/celesteBajoUno">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INICIO"
+        android:textAlignment="center"
+        android:textColor="@color/celesteFuerteUno"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="40sp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paso 1.- Seleccione sus contactos de confianza para pedir ayuda en cualquier caso de Alerta"
+        android:textColor="@color/celesteFuerteUno"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="17sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp"
+        android:textAlignment="center"
+        android:paddingBottom="30dp">
+
+        <Button
+            android:id="@+id/btnSeleccionarContactos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contactos"/>
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paso 2.- Una vez seleccionado los contactos ya podrá realizar alertas en caso de emergencia"
+        android:textColor="@color/celesteFuerteUno"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="17sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
+
+        <Button
+            android:id="@+id/btnIrAalerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alerta"/>
+    </LinearLayout>
+
+</LinearLayout>

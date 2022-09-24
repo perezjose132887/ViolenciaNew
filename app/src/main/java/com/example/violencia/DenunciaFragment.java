@@ -145,8 +145,8 @@ public class DenunciaFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //insertarDenuncia("https://codeperez.000webhostapp.com/ModuloDenunciaActivity.php");
-                insertarDenuncia("https://luchacontralaviolencia.000webhostapp.com/ModuloDenunciaActivity.php");
-                //insertarDenuncia("http://192.168.1.100/violencia/ModuloDenunciaActivity.php");
+                //insertarDenuncia("https://luchacontralaviolencia.000webhostapp.com/ModuloDenunciaActivity.php");
+                insertarDenuncia("http://192.168.1.100/violencia/ModuloDenunciaActivity.php");
 
             }
         });

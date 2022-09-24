@@ -109,8 +109,8 @@ public class ModuloUsuarioActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //insertarUsuario("https://codeperez.000webhostapp.com/ModuloUsuarioActivity.php");
-                insertarUsuario("https://luchacontralaviolencia.000webhostapp.com/ModuloUsuarioActivity.php");
-                //insertarUsuario("http://192.168.1.100/violencia/ModuloUsuarioActivity.php");
+                //insertarUsuario("https://luchacontralaviolencia.000webhostapp.com/ModuloUsuarioActivity.php");
+                insertarUsuario("http://192.168.1.100/violencia/ModuloUsuarioActivity.php");
             }
         });
 

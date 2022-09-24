@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 public class SplashActivity extends AppCompatActivity {
 
 
-    String idUsuario,nombres,primerApellido,numeroCI,foto,correo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,18 +36,18 @@ public class SplashActivity extends AppCompatActivity {
         img.setAnimation(animacion1);
 
 
-        idUsuario=getIntent().getStringExtra("idUsuario");
-        nombres=getIntent().getStringExtra("nombres");
-        primerApellido=getIntent().getStringExtra("primerApellido");
-        numeroCI=getIntent().getStringExtra("numeroCI");
-        foto=getIntent().getStringExtra("foto");
-        correo=getIntent().getStringExtra("correo");
+        String idUsuario=getIntent().getStringExtra("idUsuario");
+        String nombres=getIntent().getStringExtra("nombres");
+        String primerApellido=getIntent().getStringExtra("primerApellido");
+        String numeroCI=getIntent().getStringExtra("numeroCI");
+        String foto=getIntent().getStringExtra("foto");
+        String correo=getIntent().getStringExtra("correo");
 
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(SplashActivity.this,ModuloContactoActivity.class);
+                Intent intent=new Intent(SplashActivity.this,MenuOpcionesActivity.class);
                 intent.putExtra("idUsuario",idUsuario);
                 intent.putExtra("nombres",nombres);
                 intent.putExtra("primerApellido",primerApellido);
