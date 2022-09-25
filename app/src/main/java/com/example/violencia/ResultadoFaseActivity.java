@@ -60,15 +60,15 @@ public class ResultadoFaseActivity extends AppCompatActivity {
         int valor=Integer.parseInt(dato);
         if(valor<6){
             //Toast.makeText(ResultadoFaseActivity.this, "Es menor a 6", Toast.LENGTH_SHORT).show();
-            return "Estimada, usted no sufre de violencia \n\nEl amor no reclama posesiones sino que da libertad.\n(Rabindranath Tagore)";
+            return "Estimada, usted no sufre de violencia. Se le recomienda realizar los test una vez a la semana\n\nEl amor no reclama posesiones sino que da libertad.\n(Rabindranath Tagore)";
         }else{
             if(valor<11){
                 //Toast.makeText(ResultadoFaseActivity.this, "Es menor a 11", Toast.LENGTH_SHORT).show();
-                return "Estimada, usted está presentando algunos síntomas de violencia, le recomendamos dialogar con su pareja para resolver y mejorar su relación.\n\nRompe el silencio. Cuando seas testigo de la violencia contra las mujeres no te quedes de brazos cruzados. Actúa.\n(Ban Ki Moon)";
+                return "Estimada, usted está presentando algunos síntomas de violencia, le recomendamos dialogar con su pareja o comunicarse con la felcv para asesoramientos y mejorar su relación.\n\nRompe el silencio. Cuando seas testigo de la violencia contra las mujeres no te quedes de brazos cruzados. Actúa.\n(Ban Ki Moon)";
             }else{
                 if(valor<15){
                     //Toast.makeText(ResultadoFaseActivity.this, "Es menor a 15", Toast.LENGTH_SHORT).show();
-                    return "Estimada, usted está presentando varios síntomas de violencia.\n\nMi silencio no me protegió. Tú silencio no te protegerá.\n(Audre Lorde)";
+                    return "Estimada, usted está presentando varios síntomas de violencia. Se le recomienda comunicarse con la felcv para su asesoramiento\n\nMi silencio no me protegió. Tú silencio no te protegerá.\n(Audre Lorde)";
                 }else{
                     //Toast.makeText(ResultadoFaseActivity.this, "Alerta", Toast.LENGTH_SHORT).show();
                     return "Estimada, usted está sufriendo violencia en muchos aspectos y corre peligro, le recomendamos contactarse con el SLIM.\n\nDefiende tu vida, lucha por tu independencia, busca tu felicidad y aprende a quererte\n(Izaskun González)";

@@ -7,5 +7,472 @@
     tools:context=".PreguntasFragment">
 
 
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/celesteBajoUno">
+        <!-- TODO: Update blank fragment layout -->
+
+
+
+        <LinearLayout
+            android:id="@+id/llpatrulla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/celesteBajoUno"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/NumeroEmerg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="LEY PARA GARANTIZAR A LAS MUJERES UNA VIDA LIBRE DE VIOLENCIA NRO. 348"
+                android:textAlignment="center"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="25dp" />
+            <TextView
+                android:id="@+id/NumeroEmerge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Preguntas y respuestas"
+                android:textAlignment="center"
+                android:textColor="#ff0000"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtUno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Cuál es el objetivo de la Ley 348?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="La Ley para garantizar a las mujeres una vida libre de violencia,
+tiene por objeto establecer mecanismos, medidas y políticas
+integrales de prevención, atención, protección y reparación a
+las mujeres en situación de violencia, así como la persecución y
+sanción a los agresores."
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtDos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="¿A quién protege la ley?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Protege a todas las mujeres sin importar su edad, condición,
+situación, origen o estado civil."
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtTres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="¿Qué tipos de violencia sanciona la Ley N° 348?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Violencia Física,Violencia feminicida,Violencia sicológica,Violencia sexual,Violencia mediática,Violencia contra los derechos reproductivos,Violencia contra los derechos y la libertad sexual,Violencia simbólica y/o encubierta,Violencia contra la dignidad, la honra y el nombre,Violencia en servicios de salud,Violencia patrimonial y económica,Violencia laboral,Violencia en el sistema educativo,Violencia política,Violencia institucional,Violencia en la familia."
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtCuatro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="¿Qué son las casas de acogida y refugio
+temporal?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Las Casas de Acogida y Refugio Temporal se constituyen en
+refugio seguro para las mujeres en situación de violencia. Su
+localización no podrá ser revelada, salvo a personas autorizadas
+y se garantizará el anonimato y privacidad.
+Las mujeres que recurran a las Casas de Acogida no podrán permanecer en ellas más de tres meses, a menos que por
+la gravedad de la violencia sufrida o debido a condiciones
+especiales se requiera prolongar este tiempo."
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtOcho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="¿Quiénes deben garantizar el funcionamiento de
+casas de acogida?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Las gobernaciones y alcaldías tienen la responsabilidad de
+crear, equipar, mantener y atender Casas de Acogida y Refugio
+Temporal para mujeres en situación de violencia en el área
+urbana y rural. Deberán contar con personal debidamente
+capacitado y especializado en atención a mujeres en situación
+de violencia."
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtNueve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="¿Quiénes deben garantizar el funcionamiento de
+casas de acogida?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="La rehabilitación de los agresores será dispuesta por autoridad
+competente, con el objetivo de promover cambios en su
+conducta agresiva. La terapia no sustituirá la sanción impuesta
+por los hechos de violencia. En ningún caso, la terapia se
+prestará junto a la mujer agredida."
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtCinco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="¿Quiénes pueden presentar denuncias por
+violencia hacia la mujer?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Todo hecho de violencia contra las mujeres podrá ser
+denunciado por la víctima o cualquier otra persona que conozca
+de un delito."
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtSeis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="¿Qué instituciones pueden recibir denuncias?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="La Policía Boliviana, el Ministerio Público, los Servicios
+Legales Integrales Municipales, las Defensorías de la Niñez
+y Adolescencia, cuando la persona agredida sea menor de 18
+años, la Defensoría del Pueblo, los Servicios Integrados de
+Justicia Plurinacional, el Servicio Plurinacional de Defensa
+de la Víctima, las autoridades indígena originario campesinas,
+cuando corresponda."
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtSiete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="¿Cuáles son las responsabilidades de la Fuerza
+Especial de Lucha contra la Violencia hacia la
+mujer?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Recibir denuncias orales o escritas, de mujeres víctimas de
+violencia o de terceros que conozcan el hecho, levantar acta sobre los hechos ocurridos, socorrer a las personas agredidas y a sus hijas e hijos u
+otros dependientes, aun cuando se encuentren dentro de
+un domicilio, levantar acta sobre los hechos ocurridos, decomisar las armas y los objetos utilizados para amenazar
+y agredir, orientar a las víctimas sobre los recursos que la Ley les
+confiere y los servicios de atención y protección existentes
+a su disposición, hacer seguimiento a la mujer por 72 horas, con el fin de
+garantizar la eficacia de la protección brindada a la mujer en
+situación de violencia y las otras personas que estuvieran
+en riesgo."
+                android:textSize="20dp" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text=""
+                android:background="#000000"
+                android:textSize="1sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txtDiez"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="¿Qué garantías debe otorgarle el Estado a la
+mujer víctima de violencia?"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="El acceso a la justicia de manera gratuita, real, oportuna y
+efectiva. El acceso a servicios de protección inmediata, oportuna
+y especializada, desde el momento en que el hecho de
+violencia se ponga en conocimiento de las autoridades, Orientación y asistencia jurídica inmediata, gratuita y
+especializada, Una atención con calidad y calidez, apoyo y acogida para
+lograr su recuperación integral, La averiguación de la verdad, la reparación del daño y
+prevención de la reiteración de los actos de violencia, "
+                android:textSize="20dp" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
 
 </LinearLayout>

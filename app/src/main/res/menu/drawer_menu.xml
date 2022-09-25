@@ -34,12 +34,16 @@
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_notificacion"
-                    android:title="Notificaiones"
+                    android:title="Notificaciones"
                     android:icon="@drawable/ic_notificacion"/>
                 <item
-                    android:id="@+id/nav_contactos"
-                    android:title="Contactos"
-                    android:icon="@drawable/ic_contacto"/>
+                    android:id="@+id/nav_nosotros"
+                    android:title="Nosotros"
+                    android:icon="@drawable/equipo"/>
+                <item
+                    android:id="@+id/nav_configuracion"
+                    android:title="Configuración"
+                    android:icon="@drawable/configuracion"/>
             </group>
         </menu>
     </item>

@@ -155,8 +155,8 @@ public class AlertaFragment extends Fragment {
                 enviarMensaje();
                 llamar();
                 //insertarAlerta("https://codeperez.000webhostapp.com/ModuloAlertaActivity.php");
-                //insertarAlerta("https://luchacontralaviolencia.000webhostapp.com/ModuloAlertaActivity.php");
-                insertarAlerta("http://192.168.1.100/violencia/ModuloAlertaActivity.php");
+                insertarAlerta("https://luchacontralaviolencia.000webhostapp.com/ModuloAlertaActivity.php");
+                //insertarAlerta("http://192.168.1.102/violencia/ModuloAlertaActivity.php");
             }
         });
 
@@ -291,7 +291,7 @@ public class AlertaFragment extends Fragment {
             cm.setTelefono(cursor.getString(2));
             lista.add(cm);
         }
-        String mensajeAyuda = "Hola soy "+nombres+" necesito ayuda, mi ubicacion es: \n https://maps.google.com/?q="
+        String mensajeAyuda = "Hola soy "+nombres+" necesito tu ayuda ¡URGENTE!, mi ubicacion es: \n https://maps.google.com/?q="
                 + latitud.getText().toString().trim() + "," + longitud.getText().toString().trim()
                 +"\n App Violencia Contra la Mujer";
 
