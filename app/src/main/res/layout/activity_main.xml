@@ -11,15 +11,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/unido"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/logo2"
         android:layout_gravity="center"
         android:scaleType="fitCenter"
-        android:layout_marginBottom="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="20dp"/>
 
 
 

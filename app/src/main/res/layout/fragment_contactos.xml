@@ -3,16 +3,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ContactosFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="CONTACTOS"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/celesteFuerteUno"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:id="@+id/tvImportante1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IMPORTANTE: Seleccione sus contactos de confianza para pedir ayuda en cualquier caso de Alerta"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center"
+        android:textSize="19sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FF0000"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Nombre Contacto"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="90dp"
+        android:layout_marginBottom="15dp"
+        app:startIconDrawable="@drawable/ic_contacto">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNombreContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Telefono"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            app:startIconDrawable="@drawable/ic_telefono">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:text=""/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageButton
+            android:id="@+id/ibtnSeleccionar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_contacto"
+            android:scaleType="fitCenter"
+            android:backgroundTint="#00AF80"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
 
 
     <Button
-        android:id="@+id/btnCerrarSesion"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnGuardarContacto"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cerrar Sesion" />
+        android:text="GUARDAR EN LA LISTA"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:backgroundTint="@color/celesteFuerteUno"/>
+
+    <Button
+        android:id="@+id/btnEliminarLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ELIMINAR LISTA"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:backgroundTint="@color/celesteFuerteUno"/>
+    <ListView
+        android:id="@+id/lvListaContactos"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="32dp"
+        android:backgroundTint="#34E91E63"
+        android:background="@color/celesteBajoDos"/>
+
+
+
 
 </LinearLayout>

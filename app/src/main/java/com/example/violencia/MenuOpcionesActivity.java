@@ -2,11 +2,15 @@ package com.example.violencia;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -38,6 +42,14 @@ public class MenuOpcionesActivity extends AppCompatActivity {
         String foto=getIntent().getStringExtra("foto");
         String correo=getIntent().getStringExtra("correo");
         guardarPreferenciasSesion(idUsuario,nombres,primerApellido,numeroCI,correo);
+
+        /*//Permiso para realizar llamadas
+        int permissionCheck = ContextCompat.checkSelfPermission(
+                this, Manifest.permission.CALL_PHONE);
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, 225);
+        } else {
+        }*/
 
         seleccionarContactos.setOnClickListener(new View.OnClickListener() {
             @Override

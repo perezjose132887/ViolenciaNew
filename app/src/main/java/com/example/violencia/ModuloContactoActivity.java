@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.ContentValues;
@@ -81,6 +82,11 @@ public class ModuloContactoActivity extends AppCompatActivity {
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(ModuloContactoActivity.this, new String[]{Manifest.permission.SEND_SMS}, 1);
         }
+
+
+
+
+
         /*eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

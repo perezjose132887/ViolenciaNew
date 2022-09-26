@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -47,8 +48,9 @@ public class ResultadoFaseActivity extends AppCompatActivity {
         aceptarResultado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(ResultadoFaseActivity.this, NavigationDrawer.class);
+                Intent intent=new Intent(ResultadoFaseActivity.this,NavigationDrawer.class);
                 startActivity(intent);
+
             }
         });
 

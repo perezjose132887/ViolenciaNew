@@ -10,13 +10,14 @@
 
     <ImageView
         android:id="@+id/imgJuntosX"
-        android:layout_width="219dp"
-        android:layout_height="283dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="333dp"
+        android:layout_height="369dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.371"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/unido" />
+        app:srcCompat="@drawable/logo2" />
 
     <TextView
         android:id="@+id/txt1"
