@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.application.isradeleon.notify.Notify;
 import com.google.android.material.navigation.NavigationView;
 
 public class NavigationDrawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -43,6 +44,10 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
 
 
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +58,13 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         toolbar=findViewById(R.id.toolbar);
         nombreHeader=(TextView) findViewById(R.id.txtNombreHeader);
         correoHeader=(TextView) findViewById(R.id.txtCorreoHeader);
+
+
+
+        /////////////////NOTIFICACION//////////////////
+        int numero = (int)(Math.random()*5+1);
+        mensajeNotificacion(numero);
+        //////////////////////////////////////////////
 
 
 
@@ -231,4 +243,102 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
+
+
+
+
+    ////////////////////NOTIFICACION////////////////////
+    private void mensajeNotificacion(int numero){
+        switch (numero){
+            case 1:
+                /*return "Defiende tu vida, lucha por tu independencia," +
+                        " busca tu felicidad y aprende a quererte.";*/
+                Notify.build(getApplicationContext())
+                        .setTitle("POR UNA VIDA LIBRE DE VIOLENCIAS")
+                        //.setContent("Defiende tu vida, lucha por tu independencia, busca tu felicidad y aprende a quererte.")
+                        .setContent("Nada bueno viene jamás de la violencia")
+                        .setSmallIcon(R.drawable.corazonnoti)
+                        .setColor(R.color.black)
+                        .setLargeIcon(R.drawable.stop)
+                        .largeCircularIcon()
+                        .setPicture(R.drawable.noti5)
+                        .show();
+                break;
+            case 2:
+                /*return "Cualquier momento del día o de la noche es bueno" +
+                        " para decir basta y poner fin a una etapa de tu" +
+                        " vida que hubieras deseado no vivir.";*/
+                Notify.build(getApplicationContext())
+                        .setTitle("POR UNA VIDA LIBRE DE VIOLENCIAS")
+                        //.setContent("Cualquier momento del día o de la noche es bueno para decir basta y poner fin a una etapa de tu vida que hubieras deseado no vivir.")
+                        .setContent("La violencia es el problema, no la solucion")
+                        .setSmallIcon(R.drawable.corazonnoti)
+                        .setColor(R.color.black)
+                        .setLargeIcon(R.drawable.stop)
+                        .largeCircularIcon()
+                        .setPicture(R.drawable.noti3)
+                        .show();
+                break;
+            case 3:
+
+                /*return "No quiero sentirme valiente cuando salga a la calle," +
+                        " quiero sentirme libre.";*/
+                Notify.build(getApplicationContext())
+                        .setTitle("POR UNA VIDA LIBRE DE VIOLENCIAS")
+                        //.setContent("No quiero sentirme valiente cuando salga a la calle quiero sentirme libre.")
+                        .setContent("Ponle din para tener un principio ¡DENUNCIA!")
+                        .setSmallIcon(R.drawable.corazonnoti)
+                        .setColor(R.color.black)
+                        .setLargeIcon(R.drawable.stop)
+                        .largeCircularIcon()
+                        .setPicture(R.drawable.noti2)
+                        .show();
+                break;
+            case 4:
+                /*return "Rompe el silencio. Cuando seas testigo de la violencia" +
+                        " contra las mujeres no te quedes de brazos cruzados." +
+                        " Actúa.";*/
+                Notify.build(getApplicationContext())
+                        .setTitle("POR UNA VIDA LIBRE DE VIOLENCIAS")
+                        //.setContent("Rompe el silencio. Cuando seas testigo de la violencia contra las mujeres no te quedes de brazos cruzados. Actúa.")
+                        .setContent("¡Mujer liberáte de las garras de la violencia!")
+                        .setSmallIcon(R.drawable.corazonnoti)
+                        .setColor(R.color.black)
+                        .setLargeIcon(R.drawable.stop)
+                        .largeCircularIcon()
+                        .setPicture(R.drawable.noti4)
+                        .show();
+                break;
+            case 5:
+                /*return "La cantidad de ropa que uso no determina la cantidad" +
+                        " de respeto que merezco.";*/
+                Notify.build(getApplicationContext())
+                        .setTitle("POR UNA VIDA LIBRE DE VIOLENCIAS")
+                        //.setContent("La cantidad de ropa que uso no determina la cantidad de respeto que merezco.")
+                        .setContent("No estas sola, ¡DENUNCIA!")
+                        .setSmallIcon(R.drawable.corazonnoti)
+                        .setColor(R.color.black)
+                        .setLargeIcon(R.drawable.stop)
+                        .largeCircularIcon()
+                        .setPicture(R.drawable.noti1)
+                        .show();
+                break;
+            default:
+                break;
+        }
+    }
+
+    //////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 }
