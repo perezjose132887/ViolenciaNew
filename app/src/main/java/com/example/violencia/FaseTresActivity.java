@@ -34,7 +34,7 @@ public class FaseTresActivity extends AppCompatActivity {
             f3p5r1,f3p5r2,f3p5r3;
     EditText result1,result2,result3,result4,result5,resultadoFaseTres;
     Button registrarFaseTres;
-    String Uno="1",Dos="2",Tres="3",sresult1,sresult2,sresult3,sresult4,sresult5,idUsuario,sresultadoFaseTres;
+    String Cero="0",Uno="1",Dos="2",sresult1,sresult2,sresult3,sresult4,sresult5,idUsuario,sresultadoFaseTres;
 
     String idNombreFaseTres="3";
 
@@ -156,64 +156,64 @@ public class FaseTresActivity extends AppCompatActivity {
 
         int resultado=0;
         if(f3p1r1.isChecked()){
+            resultado+=0;
+            result1.setText(Cero);
+        }
+        if(f3p1r2.isChecked()){
             resultado+=1;
             result1.setText(Uno);
         }
-        if(f3p1r2.isChecked()){
+        if(f3p1r3.isChecked()){
             resultado+=2;
             result1.setText(Dos);
         }
-        if(f3p1r3.isChecked()){
-            resultado+=3;
-            result1.setText(Tres);
-        }
         if(f3p2r1.isChecked()){
+            resultado+=0;
+            result2.setText(Cero);
+        }
+        if(f3p2r2.isChecked()){
             resultado+=1;
             result2.setText(Uno);
         }
-        if(f3p2r2.isChecked()){
+        if(f3p2r3.isChecked()){
             resultado+=2;
             result2.setText(Dos);
         }
-        if(f3p2r3.isChecked()){
-            resultado+=3;
-            result2.setText(Tres);
-        }
         if(f3p3r1.isChecked()){
+            resultado+=0;
+            result3.setText(Cero);
+        }
+        if(f3p3r2.isChecked()){
             resultado+=1;
             result3.setText(Uno);
         }
-        if(f3p3r2.isChecked()){
+        if(f3p3r3.isChecked()){
             resultado+=2;
             result3.setText(Dos);
         }
-        if(f3p3r3.isChecked()){
-            resultado+=3;
-            result3.setText(Tres);
-        }
         if(f3p4r1.isChecked()){
+            resultado+=0;
+            result4.setText(Cero);
+        }
+        if(f3p4r2.isChecked()){
             resultado+=1;
             result4.setText(Uno);
         }
-        if(f3p4r2.isChecked()){
+        if(f3p4r3.isChecked()){
             resultado+=2;
             result4.setText(Dos);
         }
-        if(f3p4r3.isChecked()){
-            resultado+=3;
-            result4.setText(Tres);
-        }
         if(f3p5r1.isChecked()){
+            resultado+=0;
+            result5.setText(Cero);
+        }
+        if(f3p5r2.isChecked()){
             resultado+=1;
             result5.setText(Uno);
         }
-        if(f3p5r2.isChecked()){
+        if(f3p5r3.isChecked()){
             resultado+=2;
             result5.setText(Dos);
-        }
-        if(f3p5r3.isChecked()){
-            resultado+=3;
-            result5.setText(Tres);
         }
 
         resultadoFaseTres.setText(""+resultado);

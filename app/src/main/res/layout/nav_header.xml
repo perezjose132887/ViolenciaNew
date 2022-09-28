@@ -11,9 +11,9 @@
 
     <ImageView
         android:id="@+id/ibtnPerfil"
-        android:layout_width="93dp"
+        android:layout_width="200dp"
         android:layout_height="80dp"
-        app:srcCompat="@drawable/ayuda" />
+        android:src="@drawable/violenciacinta"/>
 
     <TextView
         android:id="@+id/txtNombreHeader"

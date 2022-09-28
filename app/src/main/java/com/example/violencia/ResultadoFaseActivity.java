@@ -60,20 +60,20 @@ public class ResultadoFaseActivity extends AppCompatActivity {
 
     private String validarResultado(String dato){
         int valor=Integer.parseInt(dato);
-        if(valor<6){
-            //Toast.makeText(ResultadoFaseActivity.this, "Es menor a 6", Toast.LENGTH_SHORT).show();
-            return "Estimada, usted no sufre de violencia. Se le recomienda realizar los test una vez a la semana\n\nEl amor no reclama posesiones sino que da libertad.\n(Rabindranath Tagore)";
+        if(valor<=1){
+            //Toast.makeText(ResultadoFaseActivity.this, "Es menor o igual a 1 ", Toast.LENGTH_SHORT).show();
+            return "Estimada, usted no sufre de violencia. Se le recomienda realizar los test una vez a la semana.\n\nEl amor no reclama posesiones sino que da libertad.\n(Rabindranath Tagore)";
         }else{
-            if(valor<11){
-                //Toast.makeText(ResultadoFaseActivity.this, "Es menor a 11", Toast.LENGTH_SHORT).show();
-                return "Estimada, usted está presentando algunos síntomas de violencia, le recomendamos dialogar con su pareja o comunicarse con la felcv para asesoramientos y mejorar su relación.\n\nRompe el silencio. Cuando seas testigo de la violencia contra las mujeres no te quedes de brazos cruzados. Actúa.\n(Ban Ki Moon)";
+            if(valor<=5){
+                //Toast.makeText(ResultadoFaseActivity.this, "Es menor o igual a 5", Toast.LENGTH_SHORT).show();
+                return "Estimada, usted está presentando algunos síntomas de violencia, le recomendamos dialogar con su pareja o comunicarse con la FELCV para asesoramientos y mejorar su relación.\n\nRompe el silencio. Cuando seas testigo de la violencia contra las mujeres no te quedes de brazos cruzados. Actúa.\n(Ban Ki Moon)";
             }else{
-                if(valor<15){
-                    //Toast.makeText(ResultadoFaseActivity.this, "Es menor a 15", Toast.LENGTH_SHORT).show();
-                    return "Estimada, usted está presentando varios síntomas de violencia. Se le recomienda comunicarse con la felcv para su asesoramiento\n\nMi silencio no me protegió. Tú silencio no te protegerá.\n(Audre Lorde)";
+                if(valor<=9){
+                    //Toast.makeText(ResultadoFaseActivity.this, "Es menor o igual a 9", Toast.LENGTH_SHORT).show();
+                    return "Estimada, usted está presentando varios síntomas de violencia. Se le recomienda comunicarse con la FELCV ¡URGENTE! para su asesoramiento\n\nMi silencio no me protegió. Tú silencio no te protegerá.\n(Audre Lorde)";
                 }else{
                     //Toast.makeText(ResultadoFaseActivity.this, "Alerta", Toast.LENGTH_SHORT).show();
-                    return "Estimada, usted está sufriendo violencia en muchos aspectos y corre peligro, le recomendamos contactarse con el SLIM.\n\nDefiende tu vida, lucha por tu independencia, busca tu felicidad y aprende a quererte\n(Izaskun González)";
+                    return "Estimada, usted está sufriendo violencia en muchos aspectos y corre peligro, le recomendamos contactarse con el SLIM ¡URGENTE!.\n\nDefiende tu vida, lucha por tu independencia, busca tu felicidad y aprende a quererte\n(Izaskun González)";
                 }
 
             }
@@ -86,13 +86,13 @@ public class ResultadoFaseActivity extends AppCompatActivity {
 
     public void cambiarLottie(String dato){
         int valor=Integer.parseInt(dato);
-        if(valor<6){
+        if(valor<=1){
             lottieani.setAnimation(bien);
         }else{
-            if(valor<11){
+            if(valor<=5){
                 lottieani.setAnimation(advertenciados);
             }else{
-                if(valor<15){
+                if(valor<9){
                     lottieani.setAnimation(alertatres);
                 }else{
                     lottieani.setAnimation(alertatres);

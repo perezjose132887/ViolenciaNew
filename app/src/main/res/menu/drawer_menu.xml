@@ -29,13 +29,9 @@
             android:icon="@drawable/prueba"/>
     </group>
 
-    <item android:title="Social">
+    <item android:title="Configuración">
         <menu>
             <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_notificacion"
-                    android:title="Notificaciones"
-                    android:icon="@drawable/ic_notificacion"/>
                 <item
                     android:id="@+id/nav_contactos"
                     android:title="Contactos"

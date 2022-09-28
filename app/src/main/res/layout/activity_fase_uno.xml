@@ -358,7 +358,7 @@
                     android:layout_height="wrap_content"
                     android:text="NUNCA"
                     android:textSize="20sp"
-                    android:layout_marginLeft="150dp"/>
+                    android:layout_marginLeft="120dp"/>
 
                 <RadioButton
                     android:id="@+id/rbtnf1p5r2"
@@ -366,7 +366,7 @@
                     android:layout_height="wrap_content"
                     android:text="EN OCACIONES"
                     android:textSize="20sp"
-                    android:layout_marginLeft="150dp"/>
+                    android:layout_marginLeft="120dp"/>
 
                 <RadioButton
                     android:id="@+id/rbtnf1p5r3"
@@ -374,7 +374,7 @@
                     android:layout_height="wrap_content"
                     android:text="CASI SIEMPRE"
                     android:textSize="20sp"
-                    android:layout_marginLeft="150dp"/>
+                    android:layout_marginLeft="120dp"/>
 
             </RadioGroup>
             <EditText

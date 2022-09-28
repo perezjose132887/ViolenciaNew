@@ -9,7 +9,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvAlerta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -25,7 +25,7 @@
         android:id="@+id/tvImportante1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Presionar en la imagen si se encuentra en caso de violencia"
+        android:text="Presionar en la imagen si se encuentra en caso de VIOLENCIA"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -42,7 +42,8 @@
         android:layout_marginRight="32dp"
         android:adjustViewBounds="false"
         android:scaleType="fitCenter"
-        android:src="@drawable/ayuda" />
+        android:src="@drawable/ayudacuatro"
+        android:backgroundTint="@color/celesteBajoUno"/>
 
     <TextView
         android:id="@+id/txtObt"
@@ -53,7 +54,7 @@
         android:textColor="#FF0000"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="PONGAMOS FIN A LA VIOLENCIA CONTRA LAS MUJERES" />
 
 
@@ -66,7 +67,8 @@
         android:layout_marginLeft="120dp"
         android:layout_marginRight="120dp"
         android:inputType="textPersonName"
-        android:text=""/>
+        android:text=""
+        android:enabled="false" />
 
     <EditText
         android:id="@+id/etLongitud"
@@ -76,7 +78,8 @@
         android:layout_marginLeft="120dp"
         android:layout_marginRight="120dp"
         android:inputType="textPersonName"
-        android:text=""/>
+        android:text=""
+        android:enabled="false" />
 
 
 </LinearLayout>
