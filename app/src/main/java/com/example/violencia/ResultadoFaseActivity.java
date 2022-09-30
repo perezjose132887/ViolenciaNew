@@ -62,18 +62,18 @@ public class ResultadoFaseActivity extends AppCompatActivity {
         int valor=Integer.parseInt(dato);
         if(valor<=1){
             //Toast.makeText(ResultadoFaseActivity.this, "Es menor o igual a 1 ", Toast.LENGTH_SHORT).show();
-            return "Estimada, usted no sufre de violencia. Se le recomienda realizar los test una vez a la semana.\n\nEl amor no reclama posesiones sino que da libertad.\n(Rabindranath Tagore)";
+            return "Usted no sufre de violencia. Se le recomienda realizar los test una vez a la semana.\n\n¡El amor no reclama posesiones sino que da libertad!\n(Rabindranath Tagore)";
         }else{
             if(valor<=5){
                 //Toast.makeText(ResultadoFaseActivity.this, "Es menor o igual a 5", Toast.LENGTH_SHORT).show();
-                return "Estimada, usted está presentando algunos síntomas de violencia, le recomendamos dialogar con su pareja o comunicarse con la FELCV para asesoramientos y mejorar su relación.\n\nRompe el silencio. Cuando seas testigo de la violencia contra las mujeres no te quedes de brazos cruzados. Actúa.\n(Ban Ki Moon)";
+                return "Usted está presentando algunos síntomas de violencia, le recomendamos dialogar con su pareja para resolver y mejorar su relación.\n\n¡El acto más valiente es pensar por una misma. En voz alta!\n(Coco Chanel)";
             }else{
                 if(valor<=9){
                     //Toast.makeText(ResultadoFaseActivity.this, "Es menor o igual a 9", Toast.LENGTH_SHORT).show();
-                    return "Estimada, usted está presentando varios síntomas de violencia. Se le recomienda comunicarse con la FELCV ¡URGENTE! para su asesoramiento\n\nMi silencio no me protegió. Tú silencio no te protegerá.\n(Audre Lorde)";
+                    return "Usted está presentando varios síntomas de violencia, es urgente que dialogue con su pareja, o en su defecto busque consejo externo.\n\n¡Ignoramos nuestra verdadera estatura hasta que nos ponemos en pie!\n(Emily Dickinson)";
                 }else{
                     //Toast.makeText(ResultadoFaseActivity.this, "Alerta", Toast.LENGTH_SHORT).show();
-                    return "Estimada, usted está sufriendo violencia en muchos aspectos y corre peligro, le recomendamos contactarse con el SLIM ¡URGENTE!.\n\nDefiende tu vida, lucha por tu independencia, busca tu felicidad y aprende a quererte\n(Izaskun González)";
+                    return "Usted está sufriendo violencia en muchos aspectos y corre peligro, le recomendamos contactarse con el SLIM para recibir orientación de manera URGENTE.\n\nDefiende tu vida, lucha por tu independencia, busca tu felicidad y aprende a quererte\n(Izaskun González)";
                 }
 
             }
