@@ -15,7 +15,6 @@
         <!-- TODO: Update blank fragment layout -->
 
 
-
         <LinearLayout
             android:id="@+id/llpatrulla"
             android:layout_width="match_parent"
@@ -35,6 +34,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="25dp" />
+
             <TextView
                 android:id="@+id/NumeroEmerge"
                 android:layout_width="match_parent"
@@ -46,25 +46,22 @@
                 android:textAlignment="center"
                 android:textColor="#ff0000"
                 android:textSize="20dp" />
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
-
-
-
-
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp" />
 
 
             <TextView
-                android:id="@+id/txtUno"
+                android:id="@+id/t1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -73,7 +70,17 @@
                 android:text="Cuál es el objetivo de la Ley 348?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/b1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -84,18 +91,27 @@ tiene por objeto establecer mecanismos, medidas y políticas
 integrales de prevención, atención, protección y reparación a
 las mujeres en situación de violencia, así como la persecución y
 sanción a los agresores."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp" />
+
+
+
+
+
+
+
 
 
 
@@ -103,7 +119,7 @@ sanción a los agresores."
 
 
             <TextView
-                android:id="@+id/txtDos"
+                android:id="@+id/t2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -112,7 +128,17 @@ sanción a los agresores."
                 android:text="¿A quién protege la ley?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/b2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -120,18 +146,22 @@ sanción a los agresores."
                 android:layout_marginRight="20dp"
                 android:text="Protege a todas las mujeres sin importar su edad, condición,
 situación, origen o estado civil."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp" />
+
+
 
 
 
@@ -142,7 +172,7 @@ situación, origen o estado civil."
 
 
             <TextView
-                android:id="@+id/txtTres"
+                android:id="@+id/t3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -151,25 +181,42 @@ situación, origen o estado civil."
                 android:text="¿Qué tipos de violencia sanciona la Ley N° 348?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/b3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:text="Violencia Física,Violencia feminicida,Violencia sicológica,Violencia sexual,Violencia mediática,Violencia contra los derechos reproductivos,Violencia contra los derechos y la libertad sexual,Violencia simbólica y/o encubierta,Violencia contra la dignidad, la honra y el nombre,Violencia en servicios de salud,Violencia patrimonial y económica,Violencia laboral,Violencia en el sistema educativo,Violencia política,Violencia institucional,Violencia en la familia."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp" />
+
+
+
+
+
 
 
 
@@ -178,7 +225,7 @@ situación, origen o estado civil."
 
 
             <TextView
-                android:id="@+id/txtCuatro"
+                android:id="@+id/t4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -188,7 +235,17 @@ situación, origen o estado civil."
 temporal?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/b4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -201,18 +258,23 @@ y se garantizará el anonimato y privacidad.
 Las mujeres que recurran a las Casas de Acogida no podrán permanecer en ellas más de tres meses, a menos que por
 la gravedad de la violencia sufrida o debido a condiciones
 especiales se requiera prolongar este tiempo."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp" />
+
+
+
 
 
 
@@ -223,7 +285,7 @@ especiales se requiera prolongar este tiempo."
 
 
             <TextView
-                android:id="@+id/txtOcho"
+                android:id="@+id/t5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -233,7 +295,16 @@ especiales se requiera prolongar este tiempo."
 casas de acogida?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+            <Button
+                android:id="@+id/b5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -245,18 +316,21 @@ Temporal para mujeres en situación de violencia en el área
 urbana y rural. Deberán contar con personal debidamente
 capacitado y especializado en atención a mujeres en situación
 de violencia."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp" />
+
 
 
 
@@ -267,7 +341,7 @@ de violencia."
 
 
             <TextView
-                android:id="@+id/txtNueve"
+                android:id="@+id/t6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -277,7 +351,17 @@ de violencia."
 casas de acogida?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/b6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -288,18 +372,20 @@ competente, con el objetivo de promover cambios en su
 conducta agresiva. La terapia no sustituirá la sanción impuesta
 por los hechos de violencia. En ningún caso, la terapia se
 prestará junto a la mujer agredida."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp" />
 
 
 
@@ -311,7 +397,7 @@ prestará junto a la mujer agredida."
 
 
             <TextView
-                android:id="@+id/txtCinco"
+                android:id="@+id/t7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -321,7 +407,16 @@ prestará junto a la mujer agredida."
 violencia hacia la mujer?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+            <Button
+                android:id="@+id/b7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -330,18 +425,22 @@ violencia hacia la mujer?"
                 android:text="Todo hecho de violencia contra las mujeres podrá ser
 denunciado por la víctima o cualquier otra persona que conozca
 de un delito."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp" />
+
+
 
 
 
@@ -350,7 +449,7 @@ de un delito."
 
 
             <TextView
-                android:id="@+id/txtSeis"
+                android:id="@+id/t8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -359,7 +458,17 @@ de un delito."
                 android:text="¿Qué instituciones pueden recibir denuncias?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/b8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -372,18 +481,23 @@ años, la Defensoría del Pueblo, los Servicios Integrados de
 Justicia Plurinacional, el Servicio Plurinacional de Defensa
 de la Víctima, las autoridades indígena originario campesinas,
 cuando corresponda."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp" />
+
+
+
 
 
 
@@ -392,7 +506,7 @@ cuando corresponda."
 
 
             <TextView
-                android:id="@+id/txtSiete"
+                android:id="@+id/t9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -403,7 +517,16 @@ Especial de Lucha contra la Violencia hacia la
 mujer?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+            <Button
+                android:id="@+id/b9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -419,18 +542,21 @@ a su disposición, hacer seguimiento a la mujer por 72 horas, con el fin de
 garantizar la eficacia de la protección brindada a la mujer en
 situación de violencia y las otras personas que estuvieran
 en riesgo."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text=""
-                android:background="#000000"
-                android:textSize="1sp"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="1sp"
+                android:visibility="gone"/>
 
 
 
@@ -441,7 +567,7 @@ en riesgo."
 
 
             <TextView
-                android:id="@+id/txtDiez"
+                android:id="@+id/t10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -451,7 +577,16 @@ en riesgo."
 mujer víctima de violencia?"
                 android:textColor="@color/celesteFuerteUno"
                 android:textSize="20dp" />
+            <Button
+                android:id="@+id/b10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ver más"
+                android:drawableRight="@drawable/ic_vermas"
+                android:layout_marginLeft="20dp"/>
+
             <TextView
+                android:id="@+id/p10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -465,14 +600,24 @@ violencia se ponga en conocimiento de las autoridades, Orientación y asistencia
 especializada, Una atención con calidad y calidez, apoyo y acogida para
 lograr su recuperación integral, La averiguación de la verdad, la reparación del daño y
 prevención de la reiteración de los actos de violencia, "
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:visibility="gone"/>
 
+
+            <Button
+                android:id="@+id/btnDescargar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginBottom="30dp"
+                android:drawableLeft="@drawable/ic_descarga"
+                android:text="Descargar PDF" />
 
 
         </LinearLayout>
 
     </ScrollView>
-
 
 
 </LinearLayout>
