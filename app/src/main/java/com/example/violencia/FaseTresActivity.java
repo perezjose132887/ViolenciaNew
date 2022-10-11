@@ -79,8 +79,8 @@ public class FaseTresActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 CalificarFaseTres();
-                //RegistrarTres("http://192.168.1.102/violencia/registrarFaseUno.php");
-                RegistrarTres("https://luchacontralaviolencia.000webhostapp.com/registrarFaseUno.php");
+                RegistrarTres("http://192.168.1.102/violencia/registrarFaseUno.php");
+                //RegistrarTres("https://luchacontralaviolencia.000webhostapp.com/registrarFaseUno.php");
                 Intent intent=new Intent(FaseTresActivity.this,ResultadoFaseActivity.class);
                 intent.putExtra("resultadoFase",resultadoFaseTres.getText().toString());
                 startActivity(intent);

@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/cuadrado.xml" value="0.185" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/ic_contacto.xml" value="0.184" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/drawable/ic_nombreusuario.xml" value="0.1865" />
@@ -29,12 +30,15 @@
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_emergencia.xml" value="0.18795289855072464" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_emergencias.xml" value="0.19234543670264967" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_emergenia.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_mis_denuncias.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_pregunta.xml" value="0.18795289855072464" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_preguntas.xml" value="0.13763440860215054" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_salir.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_test.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_whats_app.xml" value="0.25" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/fragment_whatsapp.xml" value="0.18478260869565216" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/list_misdenuncias.xml" value="0.1956521739130435" />
+        <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/list_usuarios.xml" value="0.23722627737226276" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/nav_header.xml" value="0.22" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/spinner_departamento_item_jose.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PEREZ/Documents/Android Studio/Violencia/app/src/main/res/layout/spinner_item_jose.xml" value="0.18478260869565216" />

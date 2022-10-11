@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
             @Override
             public void onClick(View view) {
                 //validarUsuario("https://codeperez.000webhostapp.com/validarUsuario.php");
-                validarUsuario("https://luchacontralaviolencia.000webhostapp.com/validarUsuario.php");
-                //validarUsuario("http://192.168.1.102/violencia/validarUsuario.php");
+                //validarUsuario("https://luchacontralaviolencia.000webhostapp.com/validarUsuario.php");
+                validarUsuario("http://192.168.1.102/violencia/validarUsuario.php");
                 obtenerDatosUsuario();
                 EliminarListaContactos();
 
@@ -164,10 +164,10 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
     private void obtenerDatosUsuario() {
         //String url="https://codeperez.000webhostapp.com/sesion.php?correo="+correo.getText().toString()+
         //        "&contrasenha="+contrasena.getText().toString();
-        String url="https://luchacontralaviolencia.000webhostapp.com/sesion.php?correo="+correo.getText().toString()+
-                "&contrasenha="+contrasena.getText().toString();
-        //String url="http://192.168.1.102/violencia/sesion.php?correo="+correo.getText().toString()+
+        //String url="https://luchacontralaviolencia.000webhostapp.com/sesion.php?correo="+correo.getText().toString()+
         //        "&contrasenha="+contrasena.getText().toString();
+        String url="http://192.168.1.102/violencia/sesion.php?correo="+correo.getText().toString()+
+                "&contrasenha="+contrasena.getText().toString();
         jrq=new JsonObjectRequest(Request.Method.GET,url,null,this,this);
         rq.add(jrq);
     }

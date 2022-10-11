@@ -182,8 +182,8 @@ public class AlertaFragment extends Fragment {
 
                 try {
                     //insertarAlerta("https://codeperez.000webhostapp.com/ModuloAlertaActivity.php");
-                    insertarAlerta("https://luchacontralaviolencia.000webhostapp.com/ModuloAlertaActivity.php");
-                    //insertarAlerta("http://192.168.1.102/violencia/ModuloAlertaActivity.php");
+                    //insertarAlerta("https://luchacontralaviolencia.000webhostapp.com/ModuloAlertaActivity.php");
+                    insertarAlerta("http://192.168.1.102/violencia/ModuloAlertaActivity.php");
                     Thread.sleep(1*1000);
                     enviarMensaje();
                     //Thread.sleep(1*1000);
