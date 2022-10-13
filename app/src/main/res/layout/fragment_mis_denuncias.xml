@@ -6,9 +6,9 @@
     tools:context=".MisDenunciasFragment"
     android:background="@color/celesteBajoUno">
 
-    <ListView
-        android:id="@+id/listMostrar"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ReciclerDenuncias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

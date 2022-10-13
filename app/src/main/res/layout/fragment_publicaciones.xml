@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PublicacionesFragment"
+    android:orientation="vertical"
+    android:background="@color/celesteBajoUno">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PUBLICACIONES"
+        android:textAlignment="center"
+        android:textColor="@color/celesteFuerteUno"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textSize="30sp"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp"
+        android:textAlignment="center"
+        android:paddingBottom="30dp">
+
+        <Button
+            android:id="@+id/btnPublicacionesOficiales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OFICIALES"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
+
+        <Button
+            android:id="@+id/btnPublicacionesComunidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comunidad"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

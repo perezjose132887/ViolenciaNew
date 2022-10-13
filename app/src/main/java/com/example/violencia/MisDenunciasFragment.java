@@ -5,29 +5,28 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.violencia.Modelo.Adaptador;
-import com.example.violencia.Modelo.DenunciaUsuarios;
-import com.example.violencia.Modelo.MisDenuncias;
+import com.example.violencia.Modelo.AdaptadorDenuncia;
+import com.example.violencia.Modelo.ListaDenuncias;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -46,10 +45,9 @@ public class MisDenunciasFragment extends Fragment {
     private String mParam2;
 
     View vista;
-    ListView list;
-    Adaptador adaptador;
-    public static ArrayList<DenunciaUsuarios> users = new ArrayList<>();
-    DenunciaUsuarios denunciaUsuarios;
+
+    List<ListaDenuncias> denunciasList;
+    RecyclerView recyclerView;
 
 
     public MisDenunciasFragment() {
@@ -87,64 +85,64 @@ public class MisDenunciasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         vista=inflater.inflate(R.layout.fragment_mis_denuncias, container, false);
-        list = vista.findViewById(R.id.listMostrar);
-        adaptador=new Adaptador(this,users);
-        list.setAdapter(adaptador);
-        //insertarDenuncia("https://codeperez.000webhostapp.com/misdenuncias.php");
-        //insertarDenuncia("https://luchacontralaviolencia.000webhostapp.com/misdenuncias.php");
-        listarDenuncia("http://192.168.1.103/violencia/misdenuncias.php");
+
+        recyclerView=vista.findViewById(R.id.ReciclerDenuncias);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        denunciasList=new ArrayList<>();
+
+        //listarDenuncia("https://codeperez.000webhostapp.com/ListaMisDenuncias.php");
+        listarDenuncia("https://luchacontralaviolencia.000webhostapp.com/ListaMisDenuncias.php");
+        //listarDenuncia("http://192.168.1.103/violencia/ListaMisDenuncias.php");
+
+
+
 
         return vista;
     }
 
 
 
-
-
-
     public void listarDenuncia(String URL){
-        StringRequest request = new StringRequest(Request.Method.POST, URL,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        SharedPreferences preferences=getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
-                        String nu=preferences.getString("idUsuario","No encontrado");
-                        users.clear();
-                        try{
-                            JSONObject jsonObject = new JSONObject(response);
-                            String success = jsonObject.getString("success");
-                            JSONArray jsonArray = jsonObject.getJSONArray("datos");
-                            if(success.equals("1")){
-                                for(int i=0;i<jsonArray.length();i++){
-                                    JSONObject object = jsonArray.getJSONObject(i);
-                                    String idDenuncia = object.getString("idDenuncia");
-                                    String nombres = object.getString("nombres");
-                                    String descripcionCategoria = object.getString("descripcionCategoria");
-                                    String declaracion = object.getString("declaracion");
-                                    String estado = object.getString("estado");
-                                    String idUsuario = object.getString("idUsuario");
-                                    String fechaRegistro = object.getString("fechaRegistro");
-                                    denunciaUsuarios = new DenunciaUsuarios(idDenuncia,nombres,descripcionCategoria,declaracion,estado,idUsuario,fechaRegistro);
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
 
-                                    if(nu.equals(idUsuario)){
-                                        users.add(denunciaUsuarios);
-                                        adaptador.notifyDataSetChanged();
-                                    }
-                                }
-                            }
-                        }
-                        catch (JSONException e){
-                            e.printStackTrace();
+            @Override
+            public void onResponse(String response) {
+                SharedPreferences preferences=getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
+                String nu=preferences.getString("idUsuario","No encontrado");
+                try {
+
+                    JSONArray array= new JSONArray(response);
+                    for (int i=0; i<array.length(); i++){
+                        JSONObject DenunciaUsuarios=array.getJSONObject(i);
+                        String idUsuario=DenunciaUsuarios.getString("idUsuario");
+
+                        if(nu.equals(idUsuario)){
+                            denunciasList.add(new ListaDenuncias(
+                                    DenunciaUsuarios.getString("idDenuncia"),
+                                    DenunciaUsuarios.getString("nombres"),
+                                    DenunciaUsuarios.getString("declaracion"),
+                                    DenunciaUsuarios.getString("estado"),
+                                    DenunciaUsuarios.getString("idUsuario"),
+                                    DenunciaUsuarios.getString("fechaRegistro"),
+                                    DenunciaUsuarios.getString("foto")
+
+                            ));
                         }
                     }
-                }, new Response.ErrorListener() {
+                    AdaptadorDenuncia adaptadordenuncia= new AdaptadorDenuncia(getActivity(),denunciasList);
+                    recyclerView.setAdapter(adaptadordenuncia);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "ERROR", Toast.LENGTH_SHORT).show();
             }
         });
-        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
-        requestQueue.add(request);
+        Volley.newRequestQueue(getContext()).add(stringRequest);
     }
 
 

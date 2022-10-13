@@ -27,9 +27,13 @@
             android:id="@+id/nav_test"
             android:title="Test Psicológico"
             android:icon="@drawable/prueba"/>
+        <item
+            android:id="@+id/nav_publicaciones"
+            android:title="Publicaciones"
+            android:icon="@drawable/publicacion"/>
     </group>
 
-    <item android:title="Configuración">
+    <item android:title="Más opciones">
         <menu>
             <group android:checkableBehavior="single">
                 <item

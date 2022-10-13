@@ -234,6 +234,9 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
             case R.id.nav_misDenuncias:
                 ft.replace(R.id.content,new MisDenunciasFragment()).commit();
                 break;
+            case R.id.nav_publicaciones:
+                ft.replace(R.id.content,new PublicacionesFragment()).commit();
+                break;
         }
         setTitle(item.getTitle());
         drawerLayout.closeDrawers();
