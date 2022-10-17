@@ -13,7 +13,7 @@
         android:text="PUBLICACIONES"
         android:textAlignment="center"
         android:textColor="@color/celesteFuerteUno"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:textSize="30sp"/>
@@ -26,13 +26,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:background="#FFFFFF"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingTop="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
         android:textAlignment="center"
-        android:paddingBottom="30dp">
+        android:paddingBottom="20dp">
 
         <Button
             android:id="@+id/btnPublicacionesOficiales"
@@ -52,12 +52,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:background="#FFFFFF"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingTop="30dp"
-        android:paddingBottom="30dp">
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
 
         <Button
             android:id="@+id/btnPublicacionesComunidad"
@@ -67,5 +67,61 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/btnPublicacionesEducativa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Educativa"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/btnPublicacionesPautasDeSeguridad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puatas de Seguridad"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/btnPublicacionesActitudesIgualitarias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actitudes Igualitarias"/>
+    </LinearLayout>
 
 </LinearLayout>

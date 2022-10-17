@@ -27,7 +27,7 @@ public class PublicacionesFragment extends Fragment {
     private String mParam2;
 
     View vista;
-    Button publicacionesOficiales,publicacionesComunidad;
+    Button publicacionesOficiales,publicacionesComunidad,publicacionesEducativa,publicacionesPautas,publicacionesIgualitaria;
 
     public PublicacionesFragment() {
         // Required empty public constructor
@@ -66,6 +66,9 @@ public class PublicacionesFragment extends Fragment {
         vista=inflater.inflate(R.layout.fragment_publicaciones, container, false);
         publicacionesOficiales=(Button) vista.findViewById(R.id.btnPublicacionesOficiales);
         publicacionesComunidad=(Button) vista.findViewById(R.id.btnPublicacionesComunidad);
+        publicacionesEducativa=(Button) vista.findViewById(R.id.btnPublicacionesEducativa);
+        publicacionesPautas=(Button) vista.findViewById(R.id.btnPublicacionesPautasDeSeguridad);
+        publicacionesIgualitaria=(Button) vista.findViewById(R.id.btnPublicacionesActitudesIgualitarias);
 
 
 
@@ -81,6 +84,30 @@ public class PublicacionesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(),PublicacionesComunidadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        publicacionesEducativa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),PublicacionesEducativaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        publicacionesPautas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),PublicacionesPautasDeSeguridadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        publicacionesIgualitaria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),PublicacionesActitudesIgualitariasActivity.class);
                 startActivity(intent);
             }
         });
