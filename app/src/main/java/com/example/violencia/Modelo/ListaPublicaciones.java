@@ -1,8 +1,11 @@
 package com.example.violencia.Modelo;
 
-public class ListaPublicaciones {
+import java.io.Serializable;
 
-    String idPublicacion,titulo,contenido,tipo,fotoPublicacion;
+public class ListaPublicaciones implements Serializable {
+
+    String idPublicacion,titulo,contenido,tipo;
+    String fotoPublicacion;
 
     public ListaPublicaciones() {
     }

@@ -70,9 +70,11 @@ public class MenuOpcionesActivity extends AppCompatActivity {
         irAalerta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences preferences=getSharedPreferences("sesion", Context.MODE_PRIVATE);
+                String nana=preferences.getString("idUsuario","No encontrado");
                 SQLiteDatabase BaseDeDatos=admin.getWritableDatabase();
                 //select * from contactos
-                Cursor cursor= BaseDeDatos.rawQuery("SELECT * FROM contactos",null);
+                Cursor cursor= BaseDeDatos.rawQuery("SELECT * FROM contactos WHERE usuariobd="+Integer.parseInt(nana),null);
                 if(cursor.getCount() != 0){
                     Intent intent=new Intent(MenuOpcionesActivity.this,NavigationDrawer.class);
                     startActivity(intent);

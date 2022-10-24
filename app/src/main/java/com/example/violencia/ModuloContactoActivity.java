@@ -46,6 +46,10 @@ public class ModuloContactoActivity extends AppCompatActivity {
     AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(ModuloContactoActivity.this,"administracion",null,1);
 
 
+    //String nana;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +69,8 @@ public class ModuloContactoActivity extends AppCompatActivity {
         String numeroCI=getIntent().getStringExtra("numeroCI");
         String foto=getIntent().getStringExtra("foto");
         String correo=getIntent().getStringExtra("correo");
+
+
 
 
 
@@ -213,10 +219,12 @@ public class ModuloContactoActivity extends AppCompatActivity {
 
 
     public void eliminarListView(){
+        SharedPreferences preferences=getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        String nana=preferences.getString("idUsuario","No encontrado");
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
-        BaseDeDatos.delete("contactos",null,null);
-        BaseDeDatos.execSQL("DROP TABLE contactos");
-        BaseDeDatos.execSQL("create table if not exists contactos(idContacto integer primary key autoincrement, nombre text, numero int)");
+        //BaseDeDatos.delete("contactos",null,null);
+        BaseDeDatos.execSQL("DELETE FROM contactos WHERE usuariobd="+Integer.parseInt(nana));
+        //BaseDeDatos.execSQL("create table if not exists contactos(idContacto integer primary key autoincrement, nombre text, numero int,usuariobd int)");
         Toast.makeText(ModuloContactoActivity.this,"La lista a sido limpiado",Toast.LENGTH_SHORT).show();
         BaseDeDatos.close();
         finish();
@@ -267,6 +275,10 @@ public class ModuloContactoActivity extends AppCompatActivity {
 
     //Metodo para guardar contacto en listview
     public void guardarContactoLista(){
+        SharedPreferences preferences=getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        String nana=preferences.getString("idUsuario","No encontrado");
+
+
         AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(ModuloContactoActivity.this,"administracion",null,1);
         SQLiteDatabase BaseDeDatos=admin.getWritableDatabase();//Abrir modo de lectura y escritura la bdd
 
@@ -277,6 +289,7 @@ public class ModuloContactoActivity extends AppCompatActivity {
             ContentValues registro= new ContentValues();
             registro.put("nombre",snombreContacto);//guardamos dentro de la bdd ahora falta insertar en la tabla
             registro.put("numero",sTelefono);
+            registro.put("usuariobd",Integer.parseInt(nana));
 
             BaseDeDatos.insert("contactos",null,registro);//registramos a la tabla
             BaseDeDatos.close();//Cerramos la base de datos;
@@ -303,9 +316,11 @@ public class ModuloContactoActivity extends AppCompatActivity {
 
 
     public ArrayList<ModelContactosActivity> obtenerContactos() {
+        SharedPreferences preferences=getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        String nana=preferences.getString("idUsuario","No encontrado");
         SQLiteDatabase BaseDeDatos=admin.getWritableDatabase();
         //select * from contactos
-        Cursor cursor= BaseDeDatos.rawQuery("SELECT * FROM contactos",null);
+        Cursor cursor= BaseDeDatos.rawQuery("SELECT * FROM contactos WHERE usuariobd="+Integer.parseInt(nana),null);
         ArrayList<ModelContactosActivity> lista=new ArrayList<ModelContactosActivity>();
 
 
@@ -314,6 +329,7 @@ public class ModuloContactoActivity extends AppCompatActivity {
             cm.setId(cursor.getInt(0));
             cm.setContacto(cursor.getString(1));
             cm.setTelefono(cursor.getString(2));
+            cm.setUsuariobd(cursor.getInt(3));
             lista.add(cm);
         }
         BaseDeDatos.close();

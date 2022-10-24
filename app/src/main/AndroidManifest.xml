@@ -34,6 +34,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".DetallePublicacionActivity"
+            android:exported="false" />
+        <activity
             android:name=".PublicacionesActitudesIgualitariasActivity"
             android:exported="false" />
         <activity

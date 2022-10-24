@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetallePublicacionActivity"
+    android:orientation="vertical"
+    android:background="@color/celesteBajoUno">
+
+    <ScrollView
+        android:id="@+id/scroldetalle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtidDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:text="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/cuadrado"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnMeGusta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Me gusta" />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20sp"
+                    android:src="@drawable/megusta"/>
+                <TextView
+                    android:id="@+id/txtConteoLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imgFotoDenunciaDetalle"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/noti1"
+                android:layout_gravity="center"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txtnombreDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nombre"
+                    android:textSize="17sp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

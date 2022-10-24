@@ -1,16 +1,19 @@
 package com.example.violencia.Modelo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.violencia.DetallePublicacionActivity;
 import com.example.violencia.R;
 
 import java.util.List;
@@ -42,7 +45,24 @@ public class AdaptadorPublicacionOficiales extends RecyclerView.Adapter<Adaptado
                 .load(listaPublicacionOficiales.getFotoPublicacion())
                 .into(holder.imgDenucia);
         holder.txtID.setText(listaPublicacionOficiales.getTitulo());
-        holder.txtNombre.setText("■"+listaPublicacionOficiales.getContenido());
+        //holder.txtNombre.setText("■"+listaPublicacionOficiales.getContenido());
+
+
+        //holder.txtNombre.setText(remplazar(""+listaPublicacionOficiales.getContenido()));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(holder.itemView.getContext(), DetallePublicacionActivity.class);
+                intent.putExtra("itemDetalle",listaPublicacionOficiales);
+                holder.itemView.getContext().startActivity(intent);
+                //Toast.makeText(mCtx, "Hola"+listaPublicacionOficiales.getTitulo(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public static String remplazar (String str) {
+        return str.replaceAll("<br />", "\n");
     }
 
     @Override

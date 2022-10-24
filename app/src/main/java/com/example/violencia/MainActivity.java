@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
                 validarUsuario("https://luchacontralaviolencia.000webhostapp.com/validarUsuario.php");
                 //validarUsuario("http://192.168.1.103/violencia/validarUsuario.php");
                 obtenerDatosUsuario();
-                EliminarListaContactos();
+                //EliminarListaContactos();
 
             }
 
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(MainActivity.this,error.toString(),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"Bienvenido a Lucy Valentine",Toast.LENGTH_SHORT).show();
                 }
             }){
                 @Nullable
@@ -246,13 +246,13 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
 
 
 
-    public void EliminarListaContactos(){
+    /*public void EliminarListaContactos(){
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
         BaseDeDatos.delete("contactos",null,null);
         BaseDeDatos.execSQL("DROP TABLE contactos");
-        BaseDeDatos.execSQL("create table if not exists contactos(idContacto integer primary key autoincrement, nombre text, numero int)");
+        BaseDeDatos.execSQL("create table if not exists contactos(idContacto integer primary key autoincrement, nombre text, numero int,usuariobd int)");
 
-    }
+    }*/
 
 
 }

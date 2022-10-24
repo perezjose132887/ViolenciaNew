@@ -4,15 +4,17 @@ public class ModelContactosActivity {
     private Integer id;
     private String contacto;
     private String telefono;
+    private Integer usuariobd;
 
     public ModelContactosActivity(){
 
     }
 
-    public ModelContactosActivity(Integer id, String contacto, String telefono) {
+    public ModelContactosActivity(Integer id, String contacto, String telefono,Integer usuariobd) {
         this.id = id;
         this.contacto = contacto;
         this.telefono = telefono;
+        this.usuariobd=usuariobd;
     }
 
     public int getId() {
@@ -39,8 +41,16 @@ public class ModelContactosActivity {
         this.telefono = telefono;
     }
 
+    public int getUsuariobd() {
+        return usuariobd;
+    }
+
+    public void setUsuariobd(Integer usuariobd) {
+        this.usuariobd = usuariobd;
+    }
+
     @Override
     public String toString() {
-        return id+" - "+contacto+" - " + telefono;
+        return " "+contacto+" - " + telefono;
     }
 }

@@ -58,6 +58,11 @@ public class ContactosFragment extends Fragment {
 
     AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(getContext(),"administracion",null,1);
 
+
+
+
+
+
     public ContactosFragment() {
         // Required empty public constructor
     }
@@ -92,6 +97,10 @@ public class ContactosFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
+
         vista=inflater.inflate(R.layout.fragment_contactos, container, false);
         eliminarLista=(Button) vista.findViewById(R.id.btnEliminarLista);
         seleccionar=(ImageButton) vista.findViewById(R.id.ibtnSeleccionar);
@@ -129,7 +138,6 @@ public class ContactosFragment extends Fragment {
 
         listarContactos();
 
-
         return vista;
     }
 
@@ -138,11 +146,13 @@ public class ContactosFragment extends Fragment {
 
 
     private void eliminarListView(){
+        SharedPreferences preferences=getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        String nana=preferences.getString("idUsuario","No encontrado");
         AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(getContext(),"administracion",null,1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
-        BaseDeDatos.delete("contactos",null,null);
-        BaseDeDatos.execSQL("DROP TABLE contactos");
-        BaseDeDatos.execSQL("create table if not exists contactos(idContacto integer primary key autoincrement, nombre text, numero int)");
+        //BaseDeDatos.delete("contactos",null,null);
+        BaseDeDatos.execSQL("DELETE FROM contactos WHERE usuariobd="+Integer.parseInt(nana));
+        //BaseDeDatos.execSQL("create table if not exists contactos(idContacto integer primary key autoincrement, nombre text, numero int,usuariobd int)");
         Toast.makeText(getContext(),"La lista a sido limpiado",Toast.LENGTH_SHORT).show();
         BaseDeDatos.close();
         //startActivity(getActivity().getIntent());
@@ -198,6 +208,9 @@ public class ContactosFragment extends Fragment {
 
     //Metodo para guardar contacto en listview
     private void guardarContactoLista(){
+
+        SharedPreferences preferences=getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        String nana=preferences.getString("idUsuario","No encontrado");
         AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(getActivity(),"administracion",null,1);
         SQLiteDatabase BaseDeDatos=admin.getWritableDatabase();//Abrir modo de lectura y escritura la bdd
 
@@ -208,6 +221,7 @@ public class ContactosFragment extends Fragment {
             ContentValues registro= new ContentValues();
             registro.put("nombre",snombreContacto);//guardamos dentro de la bdd ahora falta insertar en la tabla
             registro.put("numero",sTelefono);
+            registro.put("usuariobd",Integer.parseInt(nana));
 
             BaseDeDatos.insert("contactos",null,registro);//registramos a la tabla
             BaseDeDatos.close();//Cerramos la base de datos;
@@ -236,10 +250,12 @@ public class ContactosFragment extends Fragment {
 
 
     private ArrayList<ModelContactosActivity> obtenerContactos() {
+        SharedPreferences preferences=getActivity().getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        String nana=preferences.getString("idUsuario","No encontrado");
         AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(getContext(),"administracion",null,1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
         //select * from contactos
-        Cursor cursor = BaseDeDatos.rawQuery("SELECT * FROM contactos", null);
+        Cursor cursor = BaseDeDatos.rawQuery("SELECT * FROM contactos WHERE usuariobd="+Integer.parseInt(nana), null);
         ArrayList<ModelContactosActivity> lista = new ArrayList<ModelContactosActivity>();
 
 
@@ -248,13 +264,13 @@ public class ContactosFragment extends Fragment {
             cm.setId(cursor.getInt(0));
             cm.setContacto(cursor.getString(1));
             cm.setTelefono(cursor.getString(2));
+            cm.setUsuariobd(cursor.getInt(3));
             lista.add(cm);
         }
         BaseDeDatos.close();
         return lista;
 
     }
-
 
 
 }
