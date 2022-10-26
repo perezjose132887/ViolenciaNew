@@ -82,14 +82,61 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="nombre"
-                    android:textSize="17sp"/>
+                    android:textSize="17sp" />
 
             </RelativeLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="275dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="Comentar"
+                        app:startIconDrawable="@drawable/ic_message">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etComentario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textMultiLine"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imgEnviarComentario"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/enviarcomentario" />
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ReciclerComentarios"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
         </LinearLayout>
 
+
     </ScrollView>
+
 
 
 </LinearLayout>
