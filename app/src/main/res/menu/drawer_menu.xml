@@ -31,6 +31,10 @@
             android:id="@+id/nav_publicaciones"
             android:title="Publicaciones"
             android:icon="@drawable/publicacion"/>
+        <item
+            android:id="@+id/nav_instituciones"
+            android:title="Instituciones"
+            android:icon="@drawable/institucion"/>
     </group>
 
     <item android:title="Más opciones">

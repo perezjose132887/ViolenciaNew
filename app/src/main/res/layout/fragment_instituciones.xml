@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InstitucionesFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrolIns"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/llIns"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INSTITUCIONES"
+                android:gravity="center"
+                android:textColor="@color/celesteFuerteUno"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+
+
+            <Button
+                android:id="@+id/btnBeniIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Beni Instituciones"
+                android:drawableLeft="@drawable/ic_institucion"/>
+            <Button
+                android:id="@+id/btnChuquisacaIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Chuquisaca Instituciones"
+                android:drawableLeft="@drawable/ic_institucion"/>
+            <Button
+                android:id="@+id/btnCochabambaIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Cochabamba Instituciones"
+                android:drawableLeft="@drawable/ic_institucion"/>
+            <Button
+                android:id="@+id/btnLaPazIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="La Paz Instituciones"
+                android:drawableLeft="@drawable/ic_institucion"/>
+            <Button
+                android:id="@+id/btnOruroIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Oruro Instituciones"
+                android:drawableLeft="@drawable/ic_institucion"/>
+            <Button
+                android:id="@+id/btnPandoIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Pando Instituciones"
+                android:drawableLeft="@drawable/ic_institucion"/>
+            <Button
+                android:id="@+id/btnPotosiIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Potosi Instituciones"
+                android:drawableLeft="@drawable/ic_institucion"/>
+            <Button
+                android:id="@+id/btnSantaCruzIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Santa Cruz Instituciones"
+                android:drawableLeft="@drawable/ic_institucion"/>
+            <Button
+                android:id="@+id/btnTarijaIns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
+                android:backgroundTint="#1EBEA5"
+                android:text="Tarija Instituciones"
+                android:layout_marginBottom="20dp"
+                android:drawableLeft="@drawable/ic_institucion"/>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

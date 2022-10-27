@@ -34,6 +34,33 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".InstitucionesChuquisacaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitucionesTarijaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitucionesSantaCruzActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitucionesPotosiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitucionesPandoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitucionesOruroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitucionesLaPazActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitucionesCochabambaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstitucionesBeniActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetallePublicacionActivity"
             android:exported="false" />
         <activity
